@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
     <title>Home</title>
 </head>
-<body>
-    <h1>Home Page</h1>
-</body>
+
+    
+    <section class="hero is-primary is-fullheight">
+
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="{{ url_for('Routing.Welcome') }}" class="navbar-item">
+                                Welcome
+                            </a>
+
+                            <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Home') }}" class="navbar-item">
+                                Home
+                            </a>
+                            {% endif %} 
+                            <!-- End -->
+                            
+                            <!-- this means a User can only view this page if they are logged out, This page will be hidden when user is logged in  -->
+                            {% if not current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Login') }}" class="navbar-item">
+                                Login
+                            </a>
+
+
+                            <a href="{{ url_for('Routing.Signup') }}" class="navbar-item">
+                                Sign Up
+                            </a>
+                            {% endif %}
+
+                            <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Profile') }}" class="navbar-item">
+                                Profile
+                            </a>
+                            {% endif %}
+
+                            <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Logout') }}" class="navbar-item">
+                                Logout
+                            </a>
+                            {% endif %}
+                            
+                            <!-- Todo: Add and Route other HTML UI pages (e.g: Welcome Page) -->
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+
+
+
+
 </html>

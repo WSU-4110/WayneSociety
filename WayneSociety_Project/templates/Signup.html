@@ -1,3 +1,7 @@
+{% extends "Home.html" %}
+
+{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,49 @@
     <title>SignUp</title>
 </head>
 <body>
-    <h1> Sign Up</h1>
+    <div class="column is-4 is-offset-4">
+        <h3 class="title">Sign Up</h3>
+        <div class="box">
+
+            <!-- Configuration to route from signup to login, after users have entered their information-->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+
+            <!-- We also want to use bootstrap notification to confirm if users data already exist
+                
+                Once we get the user sign up request we compare it to our existing database and check to see if the information already exist
+
+                if Information Exist, re-route to login page
+            -->
+            <div class="notification is-danger">
+                {{ messages[0] }}. Please go to <a href="{{ url_for('Routing.Login') }}">login page</a>.
+            </div>
+            {% endif %}
+        {% endwith %}
+        
+            <form method="POST" action="/Signup">
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
+                    </div>
+                </div>
+    
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
+                    </div>
+                </div>
+    
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-large" type="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+    
+                <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
+{% endblock %}
