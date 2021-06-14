@@ -1,3 +1,7 @@
+{% extends "NavRender.html" %}
+
+{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,10 @@
     <title>Profile</title>
 </head>
 <body>
-    <h1>Profile Page</h1>
+    <h1 class="title">
+        <!-- {{name }} will render the current user logged in -->
+        Welcome to WayneSociety,  {{ name }}!
+      </h1>
+      {% endblock %}
 </body>
 </html>
