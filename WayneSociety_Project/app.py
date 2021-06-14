@@ -4,7 +4,7 @@ from . import db
 
 app = Blueprint('app', __name__)
 
-#ToDO: Moved to Sprint  ->
+#ToDO: Moved to Sprint 2  ->
 # Implement Efficient Object Oriented Practices for routing
 
 # @app.route('/')
