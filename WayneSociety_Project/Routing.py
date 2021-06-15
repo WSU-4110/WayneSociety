@@ -88,6 +88,14 @@ def Get_Sign_Up():
     return redirect(url_for('Routing.Login'))
 
 
+#ROuting for Attractions
+@Routing.route('/Attractions')
+def Attractions():
+    return render_template('Attractions.html')
+
+#Routing for Events
+def Events():
+    return render_template('Events.html')
 
 # ROuting for Users to view their profile
 # We should also show the users information on this page so they know they are currently logged in
