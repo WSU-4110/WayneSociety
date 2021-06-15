@@ -21,7 +21,7 @@ Nathan Herskovitz (Software Developer)
 Priyam Amin (Team Leader + Project Lead)
 ```
 
-## Backend-End Developers
+## Back-End Developers
 ```
 Emran Rahman (UI + Backend)
 Caleb Obi (UI + Backend)
