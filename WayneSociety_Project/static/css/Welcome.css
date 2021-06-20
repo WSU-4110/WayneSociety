@@ -1,3 +1,5 @@
+/* CSS for Section class*/
+
 section {
     position: relative;
     min-height: 100vh;
@@ -14,6 +16,7 @@ section {
 
 
 
+/*General CSS*/
 * {
 	margin: 0;
 	padding: 0;
@@ -26,10 +29,7 @@ html {
 	color: #fff;
 }
 
-/* ul,
-nav {
-	list-style: none;
-} */
+
 
 a {
 	text-decoration: none;
@@ -37,9 +37,12 @@ a {
 	color: #fff;
 }
 
+
+/*Button Css*/
 a:hover {
 	opacity: 1;
 }
+
 
 a.btn {
 	border-radius: 4px;
@@ -52,7 +55,7 @@ a.btn {
 }
 
 a.btn:hover {
-	background-color: #ce5856;
+	background-color: #96d1ec;
 }
 
 section {
@@ -76,7 +79,7 @@ section:not(.hero):nth-child(even) {
 hr {
 	width: 250px;
 	height: 3px;
-	background-color: #e07e7b;
+	background-color: #38A0D0;
 	border: 0;
 	margin-bottom: 50px;
 }
@@ -96,6 +99,25 @@ hr {
 .image-4 {
 	background:  url("https://res.cloudinary.com/dkboobgab/image/upload/v1624126044/Detroit-Institute-of-Arts_q1kznw.jpg");
 }
+
+
+.image-5 {
+	background-image: url("https://res.cloudinary.com/dkboobgab/image/upload/v1624173190/Event4_hesms1.jpg");
+}
+
+.image-6 {
+	background-image:  url("https://res.cloudinary.com/dkboobgab/image/upload/v1624173202/Events5_szdd4o.jpg");
+}
+
+.image-7 {
+	background-image:  url("https://res.cloudinary.com/dkboobgab/image/upload/v1624173485/https___cdn.evbuc.com_images_129549723_524973367693_1_original_kineha.jpg");
+}
+
+.image-8 {
+	background:  url("https://res.cloudinary.com/dkboobgab/image/upload/v1624173343/https___cdn.evbuc.com_images_138908135_181252536116_1_original_dhlviz.jpg");
+}
+
+
 
 section h3.title {
 	text-transform: capitalize;
@@ -169,7 +191,7 @@ header nav li {
 	}
 }
 
-/*Hero Styles*/
+/*Do not mess with this code, */
 
 .hero {
 	position: relative;
@@ -221,6 +243,8 @@ header nav li {
 	}
 }
 
+/* Content word styling */
+
 @media (max-width: 800px) {
 	.hero {
 		min-height: 600px;
@@ -239,9 +263,9 @@ header nav li {
 	}
 }
 
-/*Destinations Section*/
+/*Atrractions and Event css */
 
-.destinations .grid li {
+.Attractions-Events .grid li {
 	height: 350px;
 	padding: 20px;
 	background-clip: content-box;
@@ -249,41 +273,41 @@ header nav li {
 	background-position: center;
 }
 
-.destinations .grid li.small {
+.Attractions-Events .grid li.small {
 	flex-basis: 30%;
 }
 
-.destinations .grid li.large {
+.Attractions-Events .grid li.large {
 	flex-basis: 70%;
 }
 
 @media (max-width: 1100px) {
-	.destinations .grid li.small,
-	.destinations .grid li.large {
+	.Attractions-Events .grid li.small,
+	.Attractions-Events .grid li.large {
 		flex-basis: 50%;
 	}
 }
 
 @media (max-width: 800px) {
-	.destinations .grid li.small,
-	.destinations .grid li.large {
+	.Attractions-Events .grid li.small,
+	.Attractions-Events .grid li.large {
 		flex-basis: 100%;
 	}
 }
 
-/*Packages Section*/
+/*Features css*/
 
-.packages .grid li {
+.Features .grid li {
 	padding: 50px;
 	flex-basis: 50%;
 	text-align: center;
 }
 
-.packages .grid li i {
+.Features .grid li i {
 	color: #e07e7b;
 }
 
-.packages .grid li h4 {
+.Features .grid li h4 {
 	font-size: 30px;
 	margin: 25px 0;
 }
@@ -291,15 +315,15 @@ header nav li {
 
 
 @media (max-width: 800px) {
-	.packages .grid li {
+	.Features .grid li {
 		flex-basis: 100%;
 		padding: 20px;
 	}
 }
 
-/*Testimonials Section*/
+/*Project Idea CSS*/
 
-.testimonials .quote {
+.Project-Idea .quote {
 	font-size: 22px;
 	font-weight: 300;
 	line-height: 1.5;
@@ -307,12 +331,12 @@ header nav li {
 }
 
 @media (max-width: 800px) {
-	.testimonials .quote {
+	.Project-Idea .quote {
 		font-size: 18px;
 		margin: 15px 0;
 	}
 
-	.testimonials .author {
+	.Project-Idea .author {
 		font-size: 14px;
 	}
 }
