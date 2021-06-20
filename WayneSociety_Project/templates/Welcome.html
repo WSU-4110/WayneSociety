@@ -1,4 +1,4 @@
-{% extends "NavRender.html" %}
+
 
 {% block content %}
 <!DOCTYPE html>
@@ -7,14 +7,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Welcome.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <title>Welcome Page</title>
 </head>
-<body>
-    <h1 class="title">
-        Welcome Page
-      </h1>
-      
-      
-</body>
+
+<section class="hero is-primary is-fullheight">
+
+
+    <div class="hero-head">
+        <nav class="navbar">
+            <div class="container">
+
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-end">
+                        {% if not current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.Welcome') }}" class="navbar-item">
+                            Welcome
+                        </a>
+                        {% endif %} 
+
+                        <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.Home') }}" class="navbar-item">
+                            Home
+                        </a>
+                        {% endif %} 
+                        <!-- End -->
+
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.Attractions') }}" class="navbar-item">
+                            Attractions
+                        </a>
+                        {% endif %} 
+
+
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.Events') }}" class="navbar-item">
+                            Events
+                        </a>
+                        {% endif %}
+
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.Food') }}" class="navbar-item">
+                            Food
+                        </a>
+                        {% endif %}
+                        
+                        <!-- this means a User can only view this page if they are logged out, This page will be hidden when user is logged in  -->
+                        {% if not current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.Login') }}" class="navbar-item">
+                            Login
+                        </a>
+
+
+                        <a href="{{ url_for('Routing.Signup') }}" class="navbar-item">
+                            Sign Up
+                        </a>
+                        {% endif %}
+
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.AboutUs') }}" class="navbar-item">
+                            About Us
+                        </a>
+                        {% endif %}
+
+                        <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.Profile') }}" class="navbar-item">
+                            Profile
+                        </a>
+                        {% endif %}
+
+                        <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('Routing.Logout') }}" class="navbar-item">
+                            Logout
+                        </a>
+                        {% endif %}
+                        
+                        <!-- Todo: Add and Route other HTML UI pages (e.g: Welcome Page) -->
+                        
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+    <div class="background-image"></div>
+    <div class="hero-content-area">
+      <h1>Wayne Society</h1>
+      <h3>Explore all your favorite activities in the Wayne County Area</h3>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section class="destinations">
+    <h3 class="title">Attractions:</h3>
+    <p>Looking for attractions in the Wayne County area to explore? Here are some of the pictures of popular attractions.</p>
+    <hr>
+
+    <ul class="grid">
+      <li class="small image-1"></li>
+      <li class="large image-2"></li>
+      <li class="large image-3"></li>
+      <li class="small image-4"></li>
+    </ul>
+  </section>
+
+  <section class="packages">
+    <h3 class="title">Features</h3>
+    <p>We offer a variety of features and services.</p>
+    <hr>
+
+    <ul class="grid">
+      <li>
+        <i class="fa fa-compass fa-4x"></i>
+        <h4>Restaurants</h4>
+        <p>View all Restaurants within the Wayne County Area</p>
+      </li>
+      <li>
+        <i class="fa fa-camera-retro fa-4x"></i>
+        <h4>Events</h4>
+        <p>Looking for trending events like: Carnival, Party, Festivals, or music concerts? View all current and upcoming events in the Wayne County Area. </p>
+      </li>
+      <li>
+        <i class="fa fa-bicycle fa-4x"></i>
+        <h4>Foods</h4>
+        <p>View popular foods and drinks available in the Wayne County Area</p>
+      </li>
+      <li>
+        <i class="fa fa-flag-checkered fa-4x"></i>
+        <h4>Jobs</h4>
+        <p>View and apply to local jobs hiring in the Wayne County Area.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <h3 class="title">Testimonials from our adventurers:</h3>
+    <hr>
+    <p class="quote">Wow! This tour made me realize how much I love being outside with my friends. After going on one of these tours, I can safely say that beer pong is my favorite game all time, also the cultural programs were really interesting!</p>
+    <p class="author">- Albert Herter</p>
+    <p class="quote">Wow, this really blew my mind. We had so much fun at the beach, and also some hidden secrets revealed. Come on, I'm living in this city for 5 years. Amazing!</p>
+    <p class="author">- Sharon Rosenberg</p>
+    <p class="quote">If you want to understand your friends better, head to the mountains. I mean, seriously. It's like sitting next to a campfire and just talk in the sunset, woah. You know? It's like that.</p>
+    <p class="author">- Luis Mendoza</p>
+  </section>
+
+  <section class="contact">
+    <h3 class="title">Stay In Touch</h3>
+    <p>Stay in touch to see the amazing things we have in store for the future.</p>
+    <hr>
+    <form>
+      <input type="email" placeholder="Email">
+      <a href="#" class="btn">Subscribe now</a>
+    </form>
+</section>
+
 </html>
 {% endblock %}

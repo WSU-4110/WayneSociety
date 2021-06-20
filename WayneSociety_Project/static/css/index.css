@@ -22,3 +22,8 @@ div.box {
   font-weight: 800;
   font-family: 'Fira Sans', sans-serif;
 }
+
+/* Center Navigation
+.navbar-item {
+  left: -75%;
+} */

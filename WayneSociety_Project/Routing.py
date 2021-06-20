@@ -94,8 +94,17 @@ def Attractions():
     return render_template('Attractions.html')
 
 #Routing for Events
+@Routing.route('/Events')
 def Events():
     return render_template('Events.html')
+
+@Routing.route('/Food')
+def Food():
+    return render_template('Food.html')
+
+@Routing.route('/AboutUs')
+def AboutUs():
+    return render_template('AboutUs.html')
 
 # ROuting for Users to view their profile
 # We should also show the users information on this page so they know they are currently logged in
