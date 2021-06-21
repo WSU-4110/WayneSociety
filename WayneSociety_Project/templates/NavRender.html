@@ -19,17 +19,38 @@
 
                     <div id="navbarMenuHeroA" class="navbar-menu">
                         <div class="navbar-end">
+                            {% if not current_user.is_authenticated %}
                             <a href="{{ url_for('Routing.Welcome') }}" class="navbar-item">
                                 Welcome
                             </a>
+                            {% endif %} 
 
                             <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
-                            {% if current_user.is_authenticated %}
+                            {% if not current_user.is_authenticated %}
                             <a href="{{ url_for('Routing.Home') }}" class="navbar-item">
                                 Home
                             </a>
                             {% endif %} 
                             <!-- End -->
+
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Attractions') }}" class="navbar-item">
+                                Attractions
+                            </a>
+                            {% endif %} 
+
+
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Events') }}" class="navbar-item">
+                                Events
+                            </a>
+                            {% endif %}
+
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Food') }}" class="navbar-item">
+                                Food
+                            </a>
+                            {% endif %}
                             
                             <!-- this means a User can only view this page if they are logged out, This page will be hidden when user is logged in  -->
                             {% if not current_user.is_authenticated %}
@@ -40,6 +61,12 @@
 
                             <a href="{{ url_for('Routing.Signup') }}" class="navbar-item">
                                 Sign Up
+                            </a>
+                            {% endif %}
+
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.AboutUs') }}" class="navbar-item">
+                                About Us
                             </a>
                             {% endif %}
 
