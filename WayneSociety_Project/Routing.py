@@ -111,7 +111,9 @@ def AboutUs():
 from flask_login import current_user
 @Routing.route('/Profile')
 def Profile():
-    return render_template('Profile.html', name = current_user.name)
+    return render_template('Profile.html', 
+    name = current_user.name, 
+    email = current_user.email)
 
 
 # Routing for Users loging out of platform
