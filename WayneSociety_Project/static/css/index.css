@@ -23,11 +23,16 @@ div.box {
   font-family: 'Fira Sans', sans-serif;
 }
 
-/* Center Navigation
+/* Center Navigation */
 .navbar-item {
-  left: -75%;
-} */
+  text-align: center;
+  right: 400px;
 
-/* .hero-head:hover {
-  background-color: #38A0D0;
-} */
+}
+
+div.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+

@@ -5,7 +5,6 @@ from flask import Blueprint
 from flask import render_template, redirect
 from flask import url_for, request
 from flask import flash
-from flask.globals import session
 from werkzeug.security import generate_password_hash 
 from werkzeug.security import check_password_hash
 from flask_login import login_user
@@ -29,7 +28,10 @@ def Welcome():
 def Home():
     return render_template('Home.html')
 
-
+#Routing for Users to Login to use platform
+@Routing.route('/Login')
+def Login():
+    return render_template('Login.html')
 
 @Routing.route('/Login', methods=['POST'])
 def Get_Login_Up():
@@ -109,9 +111,7 @@ def AboutUs():
 from flask_login import current_user
 @Routing.route('/Profile')
 def Profile():
-    return render_template('Profile.html', 
-    name = current_user.name, 
-    email = current_user.email)
+    return render_template('Profile.html', name = current_user.name, email = current_user.email)
 
 
 # Routing for Users loging out of platform
@@ -120,8 +120,4 @@ def Profile():
 def Logout():
     logout_user()
     return redirect(url_for('Routing.Welcome'))
-
-
-
-
 
