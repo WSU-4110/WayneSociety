@@ -41,6 +41,12 @@
 
 
                             {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Services') }}" class="navbar-item">
+                                Services
+                            </a>
+                            {% endif %} 
+
+                            {% if current_user.is_authenticated %}
                             <a href="{{ url_for('Routing.Events') }}" class="navbar-item">
                                 Events
                             </a>

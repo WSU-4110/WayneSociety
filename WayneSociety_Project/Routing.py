@@ -93,6 +93,10 @@ def Get_Sign_Up():
 def Attractions():
     return render_template('Attractions.html')
 
+@Routing.route('/Services')
+def Services():
+    return render_template('Services')
+
 #Routing for Events
 @Routing.route('/Events')
 def Events():
