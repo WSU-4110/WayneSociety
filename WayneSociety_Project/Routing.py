@@ -29,21 +29,7 @@ def Welcome():
 def Home():
     return render_template('Home.html')
 
-#Routing for Users to Login to use platform
-@Routing.route('/Login', methods=['GET', 'POST'])
-def Login():
-    if request.method == 'POST':
-        to_email = request.form['email']
-        session['to_email'] = to_email
-        send_verification(to_email)
-        return redirect(url_for('generate_verification_code'))
-    return render_template('Login.html')
-def send_verification(to_email):
-    verification = client.verify \
-        .services(TWILIO_VERIFY_SERVICE) \
-        .verifications \
-        .create(to=to_email, channel='email')
-    print(verification.sid)
+
 
 @Routing.route('/Login', methods=['POST'])
 def Get_Login_Up():
