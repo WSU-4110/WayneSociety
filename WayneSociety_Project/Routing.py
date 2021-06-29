@@ -95,7 +95,7 @@ def Attractions():
 
 @Routing.route('/Services')
 def Services():
-    return render_template('Services')
+    return render_template('Services.html')
 
 #Routing for Events
 @Routing.route('/Events')
@@ -124,4 +124,3 @@ def Profile():
 def Logout():
     logout_user()
     return redirect(url_for('Routing.Welcome'))
-
