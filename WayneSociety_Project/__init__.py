@@ -3,8 +3,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager 
-import os
-from dotenv import load_dotenv
+
 from flask import Flask, request, render_template, redirect, session, url_for
 
 
@@ -13,7 +12,7 @@ from flask import Flask, request, render_template, redirect, session, url_for
 db = SQLAlchemy()
 
 def create_app():
-    load_dotenv()
+    
     app = Flask(__name__)
     app.secret_key = 'secretkeylol'
 
