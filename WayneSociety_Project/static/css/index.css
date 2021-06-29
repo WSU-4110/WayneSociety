@@ -23,7 +23,16 @@ div.box {
   font-family: 'Fira Sans', sans-serif;
 }
 
-/* Center Navigation
-.navbar-item {
-  left: -75%;
+/* Center Navigation */
+/* .navbar-item {
+  text-align: center;
+  right: 400px;
+
 } */
+
+div.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+
