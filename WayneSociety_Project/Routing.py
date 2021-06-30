@@ -93,6 +93,10 @@ def Get_Sign_Up():
 def Attractions():
     return render_template('Attractions.html')
 
+@Routing.route('/Services')
+def Services():
+    return render_template('Services.html')
+
 #Routing for Events
 @Routing.route('/Events')
 def Events():
@@ -111,7 +115,7 @@ def AboutUs():
 from flask_login import current_user
 @Routing.route('/Profile')
 def Profile():
-    return render_template('Profile.html', name = current_user.name)
+    return render_template('Profile.html', name = current_user.name, email = current_user.email)
 
 
 # Routing for Users loging out of platform
@@ -120,8 +124,3 @@ def Profile():
 def Logout():
     logout_user()
     return redirect(url_for('Routing.Welcome'))
-
-
-
-
-

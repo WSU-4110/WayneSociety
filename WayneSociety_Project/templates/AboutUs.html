@@ -1,14 +1,99 @@
+{% extends "NavRender.html" %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/AboutUs.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <title>About US</title>
 </head>
 <body>
     <h1 class="title">
-        About Us Page
+        Meet Our Developers
     </h1>
+
+<!-- About Us Box-card render -->
+
+    <div class="team-section">
+		<div class="inner-width">
+			<div class="pers">
+				
+
+				<div class="pe">
+				
+					<div class="p-name">Priyam Aminson</div>
+					<div class="p-des">Front-End Engineer</div>
+					<div class="p-des">Wayne State University</div>
+					<div class="p-des">Computer Science</div>
+					<div class="p-sm">
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+				<div class="pe">
+					
+					<div class="p-name">Caleb Obi</div>
+					<div class="p-des">Full Stack Engineer</div>
+					<div class="p-des">Wayne State University</div>
+					<div class="p-des">Computer Science</div>
+					<div class="p-sm">
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+				<div class="pe">
+					
+					<div class="p-name">Emran Rahman</div>
+					<div class="p-des">Front and Backend Engineer</div>
+					<div class="p-des">Wayne State University</div>
+					<div class="p-des">Computer Science</div>
+					<div class="p-sm">
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+                <div class="pe">
+					
+					<div class="p-name">Anush Rajam</div>
+					<div class="p-des">Front-End Engineer</div>
+					<div class="p-des">Wayne State University</div>
+					<div class="p-des">Computer Science</div>
+					<div class="p-sm">
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+                <div class="pe">
+					
+					<div class="p-name">Nathan Herskovitz</div>
+					<div class="p-des">Front-End Engineer</div>
+					<div class="p-des">Wayne State University</div>
+					<div class="p-des">Computer Science</div>
+					<div class="p-sm">
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+                <div class="pe">
+					
+					<div class="p-name">Ashraf Uddin</div>
+					<div class="p-des">Front-End Engineer</div>
+					<div class="p-des">Wayne State University</div>
+					<div class="p-des">Computer Science</div>
+					<div class="p-sm">
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+      
 </body>
 </html>
+{% endblock %}
