@@ -1,0 +1,15 @@
+h5 {
+    font-size:x-large;
+}
+
+.card-deck{
+  font:white;
+  opacity:0.75; /* makes the page transparent*/
+  /*used so the cards will be side to side*/
+  display: inline-block;
+  /*width: 669px;*/
+
+}
+
+
+

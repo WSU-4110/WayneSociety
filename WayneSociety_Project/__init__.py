@@ -4,11 +4,17 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager 
 
+from flask import Flask, request, render_template, redirect, session, url_for
+
+
+
 # Import Db SQLite + SQLAlchemy
 db = SQLAlchemy()
 
 def create_app():
+    
     app = Flask(__name__)
+    app.secret_key = 'secretkeylol'
 
     # This is to configue and setup database
     app.config['SECRET_KEY'] = 'HHIIDUNUXUU&&DHKJI' #Temporary
@@ -33,5 +39,8 @@ def create_app():
     
     from .app import app as app_blueprint
     app.register_blueprint(app_blueprint)
+
+
+
 
     return app

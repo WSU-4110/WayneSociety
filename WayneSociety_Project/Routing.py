@@ -88,13 +88,34 @@ def Get_Sign_Up():
     return redirect(url_for('Routing.Login'))
 
 
+#ROuting for Attractions
+@Routing.route('/Attractions')
+def Attractions():
+    return render_template('Attractions.html')
+
+@Routing.route('/Services')
+def Services():
+    return render_template('Services.html')
+
+#Routing for Events
+@Routing.route('/Events')
+def Events():
+    return render_template('Events.html')
+
+@Routing.route('/Food')
+def Food():
+    return render_template('Food.html')
+
+@Routing.route('/AboutUs')
+def AboutUs():
+    return render_template('AboutUs.html')
 
 # ROuting for Users to view their profile
 # We should also show the users information on this page so they know they are currently logged in
 from flask_login import current_user
 @Routing.route('/Profile')
 def Profile():
-    return render_template('Profile.html', name = current_user.name)
+    return render_template('Profile.html', name = current_user.name, email = current_user.email)
 
 
 # Routing for Users loging out of platform
@@ -103,8 +124,3 @@ def Profile():
 def Logout():
     logout_user()
     return redirect(url_for('Routing.Welcome'))
-
-
-
-
-

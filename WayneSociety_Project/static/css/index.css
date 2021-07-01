@@ -22,3 +22,17 @@ div.box {
   font-weight: 800;
   font-family: 'Fira Sans', sans-serif;
 }
+
+/* Center Navigation */
+/* .navbar-item {
+  text-align: center;
+  right: 400px;
+
+} */
+
+div.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+
