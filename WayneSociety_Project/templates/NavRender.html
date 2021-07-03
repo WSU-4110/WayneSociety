@@ -33,6 +33,13 @@
                             {% endif %} 
                             <!-- End -->
 
+
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('Routing.Jobs') }}" class="navbar-item">
+                                Jobs
+                            </a>
+                            {% endif %} 
+
                             {% if current_user.is_authenticated %}
                             <a href="{{ url_for('Routing.Attractions') }}" class="navbar-item">
                                 Attractions

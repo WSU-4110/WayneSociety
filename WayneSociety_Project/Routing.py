@@ -88,6 +88,10 @@ def Get_Sign_Up():
     return redirect(url_for('Routing.Login'))
 
 
+@Routing.route('/Jobs')
+def Jobs():
+    return render_template('Jobs.html')
+
 #ROuting for Attractions
 @Routing.route('/Attractions')
 def Attractions():
