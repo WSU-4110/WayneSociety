@@ -20,7 +20,8 @@
                     <div id="navbarMenuHeroA" class="navbar-menu">
                         <div class="navbar-end">
                             {% if not current_user.is_authenticated %}
-                            <a href="{{ url_for('Routing.Welcome') }}" class="navbar-item">
+                            <a href="{{ url_for('Routing.Welcome') }}" class="navbar-item" >
+                            
                                 Welcome
                             </a>
                             {% endif %} 
@@ -68,12 +69,14 @@
                             <!-- this means a User can only view this page if they are logged out, This page will be hidden when user is logged in  -->
                             {% if not current_user.is_authenticated %}
                             <a href="{{ url_for('Routing.Signup') }}" class="navbar-item">
-                                Sign Up
+                                <button class="btn">
+                                    Sign Up</button>
                             </a>
 
 
                             <a href="{{ url_for('Routing.Login') }}" class="navbar-item">
-                                Login
+                                <button class="btn">
+                                    Login</button>
                             </a>
                             {% endif %}
 
@@ -90,10 +93,13 @@
                             </a>
                             {% endif %}
 
+
+
                             <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
                             {% if current_user.is_authenticated %}
                             <a href="{{ url_for('Routing.Logout') }}" class="navbar-item">
-                                Logout
+                                <button class="btn" style="margin-left: 100px;">
+                                    Logout</button>
                             </a>
                             {% endif %}
                             
