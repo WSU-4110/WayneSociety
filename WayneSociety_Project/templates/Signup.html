@@ -4,61 +4,152 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Signup.css')}}">
-    <title>SignUp</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Signup.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>SignUp</title>
 </head>
+
 <body>
-    <div class="column is-4 is-offset-4">
-        <h3 class="title">Sign Up</h3>
-        <div class="box">
 
-            <!-- Configuration to route from signup to login, after users have entered their information-->
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
+  <h1 class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Join WayneSociety Today.</h1>
+    <p class="paragraphs">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Create an account to view all categories in the Wayne County Area, <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View services, attractions jobs and many more. </p>
+  <div class="column is-4 is-offset-4">
+    <div class="box">
 
-            <!-- We also want to use bootstrap notification to confirm if users data already exist
+      <!-- Configuration to route from signup to login, after users have entered their information-->
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+
+      <!-- We also want to use bootstrap notification to confirm if users data already exist
                 
                 Once we get the user sign up request we compare it to our existing database and check to see if the information already exist
 
                 if Information Exist, re-route to login page
             -->
-            <div class="notification is-danger">
-                {{ messages[0] }}. Please go to <a href="{{ url_for('Routing.Login') }}">login page</a>.
-            </div>
-            {% endif %}
-            {% endwith %}
-        
-            <form method="POST" action="/Signup">
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
-                    </div>
-                </div>
-    
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
-                    </div>
-                </div>
-    
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-large" type="password" name="password" placeholder="Password">
-                        
-                        <div class="text"> Your password is too weak</div>
-                    </div>
-                </div>
-    
-                <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
-            </form>
+      <div class="notification is-danger">
+        {{ messages[0] }}. Please go to <a href="{{ url_for('Routing.Login') }}">login page</a>.
+      </div>
+      {% endif %}
+      {% endwith %}
+
+      <form method="POST" action="/Signup" id="form">
+        <div class="field">
+          <div class="control">
+            <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="" id="email" >
+            <span id="text"></span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
+          </div>
         </div>
 
-        
+        <div class="field">
+          <div class="control">
+            <input class="input is-large" type="password" name="password" placeholder="Password" oninput="ValidatePassword()" id="password">
+
+            <span id="toggle" onclick="toggle()">
+              <i class="fas fa-eye"></i>
+            </span>
+            <div id="strength-bar"></div>
+        </div>
+        <p id="msg"></p>
+
     </div>
+
+    <button class="button is-block is-info is-large is-fullwidth">Create Account</button>
+    </form>
+  </div>
+  <h3> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Already have an account? Login <a href="{{ url_for('Routing.Login') }}" style="color: #38A0D0;">Here</a></h3>
+  </div>
+
+  <script>
+
+    // All Javascript code here to check if an input is trong enough
+    let passcodes = {
+      count : false,
+    letters : false,
+    numbers : false,
+    special : false
+    }
+
+    let strengthBar = document.getElementById("strength-bar");
+let msg = document.getElementById("msg");
+
+
+function ValidatePassword(){
+  let password = document.getElementById("password").value;
+
+  passcodes.letters = (/[A-Za-z]+/.test(password))?true:false;
+  passcodes.numbers = (/[0-9]+/.test(password))?true:false;
+  passcodes.special = (/[!\"$%&/()=?@~`\\.\';:+=^*_-]+/.test(password))?true:false;
+  passcodes.count = (password.length > 7)?true:false;
+
+
+  let barLength = Object.values(passcodes).filter(value=>value);
+
+    console.log(Object.values(passcodes), barLength);
+
+
+    strengthBar.innerHTML = "";
+    for( let i in barLength){
+        let span = document.createElement("span");
+        span.classList.add("strength");
+        strengthBar.appendChild(span);
+    }
+
+
+    let spanRef = document.getElementsByClassName("strength");
+    for( let i = 0; i < spanRef.length; i++){
+        switch(spanRef.length - 1){
+            case 0 :
+                spanRef[i].style.background = "#ff3e36";
+                msg.textContent = "Your password is very weak";
+                break;
+            case 1:
+                spanRef[i].style.background = "#ff691f";
+                msg.textContent = "Your password is weak";
+                break;
+            case 2:
+                spanRef[i].style.background = "#ffda36";
+                msg.textContent = "Your password is good";
+                break;
+            case 3:
+                spanRef[i].style.background = "#0be881";
+                msg.textContent = "Your password is strong";
+                break;
+        }
+    }
+
+
+}
+
+
+// toggle function to allow users to see their current password
+function toggle(){
+    let password = document.getElementById("password");
+    let eye = document.getElementById("toggle");
+
+    if(password.getAttribute("type") == "password"){
+        password.setAttribute("type","text");
+        eye.style.color = "#38A0D0";
+    }
+    else{
+        password.setAttribute("type","password");
+        eye.style.color = "#808080";
+    }
+}
+
+
+
+  </script>
 </body>
+
 </html>
 {% endblock %}
