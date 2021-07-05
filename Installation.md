@@ -1,25 +1,5 @@
 # This ReadMe is for our Development Team
-## Setting up Flask locally
-Flask Website link: https://flask.palletsprojects.com/en/2.0.x/installation/#install-flask
 
-
-## Installations
-Open up an IDE or Code Editor
-Preffered: VSCode, Bracket, Pycharm etc...
-
-
-## Create an Environment
-## macOS/Linux
-```
-$ mkdir Project-Name
-$ cd  Project-Name
-$ python3 -m venv venv
-```
-
-## Activate the Environment
-```
-$ . venv/bin/activate
-```
 
 ## Install Flask
 ```
@@ -30,41 +10,30 @@ $ pip3 install Flask-Login
 $ pip3 install pysqlite3 
 ```
 
-## Windows
-```
-> mkdir Project-Name
-> cd  Project-Name
-> py -3 -m venv venv
-```
-
-## Activate the Environment
-```
-> venv\Scripts\activate
-```
-
-## Install Flask
-```
-> pip3 install Flask
-> pip3 install flask-bcrypt
-> pip3 install Flask-SQLAlchemy
-> pip3 install Flask-Login
-> pip3 install pysqlite3 
-```
 
 
-
-## Running Flask Application Locally
-```
-$ flask run
-```
-
-## Running WayneSociety using Flask
+## Running WayneSociety using Flask (Mac Os)
 ```
 $ git clone git@github.com:WSU-4110/WayneSociety.git
 $ cd WayneSociety
+$ python3 -m venv venv
+$ . venv/bin/activate
 $ export FLASK_APP=WayneSociety_Project
 $ export FLASK_DEBUG=1
 $ flask run
+On Browser, Open http://localhost:5000/ to view website
+```
+
+## Running WayneSociety using Flask (Windows)
+```
+Advice: Use CMD instead of PowerShell
+> git clone git@github.com:WSU-4110/WayneSociety.git
+> cd WayneSociety
+> py -3 -m venv venv
+> venv\Scripts\activate
+> set FLASK_APP=WayneSociety_Project
+> setFLASK_DEBUG=1
+> flask run
 On Browser, Open http://localhost:5000/ to view website
 ```
 ## Debugging when developing
