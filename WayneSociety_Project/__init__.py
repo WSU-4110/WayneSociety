@@ -10,6 +10,7 @@ from flask import Flask, request, render_template, redirect, session, url_for
 # Import Db SQLite + SQLAlchemy
 db = SQLAlchemy()
 
+
 def create_app():
     
     app = Flask(__name__)
@@ -30,6 +31,8 @@ def create_app():
     @Set_Login.user_loader
     def Loader_User(Get_User_id):
         return User.query.get(int(Get_User_id))
+
+
 
 
     from .Routing import Routing as Routing_blueprint
