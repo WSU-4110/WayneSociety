@@ -9,13 +9,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Login.css')}}">
     <title>Login</title>
 </head>
 <body>
 
-
+    <h1 class="title">Welcome Back :)</h1>
+    <p class="paragraphs">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Login into your account to view all categories in the Wayne County Area, <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View services, attractions jobs and many more. </p>
     <div class="column is-4 is-offset-4">
-        <h3 class="title">Login</h3>
+        
         <div class="box">
             {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -47,8 +49,13 @@
                 </div>
                 <button class="button is-block is-info is-large is-fullwidth">Login</button>
             </form>
+            <br>
+            <p class="forgot">Forgot Password?</p>
         </div>
+        
     </div>
+
+    <h3> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Don't have an account? Create an account <a href="{{ url_for('Routing.Signup') }}" style="color: #38A0D0;">Here</a></h3>
 </body>
 </html>
 {% endblock %}
