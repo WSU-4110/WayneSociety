@@ -1,205 +1,146 @@
+{% extends "NavRender.html" %}<!--nav bar-->
 
+{% block content %}
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-    <link rel="stylesheet" href="/static/css/index.css">
-    <title>Jobs</title>
+  <meta charset="UTF-8">
+  <title>CodePen - Expanding Card Grid With Flexbox</title>
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px|Yesteryear'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
 </head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
 
-    
-    <section class="hero is-primary is-fullheight">
+  <div class="header">
+    <h1 class="header__title">JObs</h1>
+    <h2 class="header__subtitle">open now</h2>
+  </div>
 
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
+  <div class="cards">
 
-                    <div id="navbarMenuHeroA" class="navbar-menu">
-                        <div class="navbar-end">
-                             
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Cashier & Front End Services</span>
+		<span>Wakmart Canton MI</span>
 
-                            <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
-                             
-                            <!-- End -->
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Cashier<br>
+ <h6>Smile, greet, and thank customers with a positive attitude <br>
+ Stand for long periods of time while checking out customers quickly and accurately <br>
+ Keep your area clean and presentable <br>
+ Answer customer questions and help them with their needs <br>
+ Be available to assist associates across the store as needed <br>
 
-                            
-                            <a href="/Attractions" class="navbar-item">
-                                Attractions
-                            </a>
-                             
+Cart and Janitorial
+• Ensure customers have a great first and last impression
+• Gather carts from the parking lot
+• Operate equipment to move carts from the parking lot to inside the store
+• Clean restrooms, salesfloor, and parking lot as needed
+• Have a positive attitude in all weather conditions.</h6>
+      </div>
+    </div>
 
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
 
-                            
-                            <a href="/Events" class="navbar-item">
-                                Events
-                            </a>
-                            
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
 
-                            
-                            <a href="/Food" class="navbar-item">
-                                Food
-                            </a>
-                            
-                            
-                            <!-- this means a User can only view this page if they are logged out, This page will be hidden when user is logged in  -->
-                            
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
 
-                            
-                            <a href="/AboutUs" class="navbar-item">
-                                About Us
-                            </a>
-                            
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
 
-                            <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
-                            
-                            <a href="/Profile" class="navbar-item">
-                                Profile
-                            </a>
-                            
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
 
-                            <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
-                            
-                            <a href="/Logout" class="navbar-item">
-                                Logout
-                            </a>
-                            
-                            
-                            <!-- Todo: Add and Route other HTML UI pages (e.g: Welcome Page) -->
-                            
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
 
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
 
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
 
-        <head>
-            <meta charset="UTF-8">
-            <title>CodePen - Expanding Card Grid With Flexbox</title>
-            <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px|Yesteryear'>
-          <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
-          <link rel="stylesheet" href="./style.css">
-          
-          </head>
-          <body>
-          <!-- partial:index.partial.html -->
-          <div class="wrapper">
-          
-            <div class="header">
-              <h1 class="header__title">Expanding Card Grid</h1>
-              <h2 class="header__subtitle">with Flexbox</h2>
-            </div>
-          
-            <div class="cards">
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ]">
-                  <span>Card</span>
-                  <i class="fa fa-folder-o"></i>
-                </div>
-                <div class="card__expander">
-                  <i class="fa fa-close [ js-collapser ]"></i>
-                  Expander
-                </div>
-              </div>
-          
-            </div>
-          
-          </div>
-          <!-- partial -->
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-          
-          </body>
+  </div>
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+
+</body>
+</html>
+{% endblock %}
