@@ -1,15 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap%22);
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
-/* html {
+
+html {
   box-sizing: border-box;
-  /* font-size: 62.5%; */
-  font-size: 65%;
-} */
-
-html{
-  box-sizing: border-box ;
-  font-size: 65%;
+  font-size: 62.5%;
 }
+
+
 .grid {
   display: grid;
   width: 114em;
@@ -17,7 +14,6 @@ html{
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: start;
 }
-
 
 .grid-item {
   background-color: #fff;
@@ -42,7 +38,6 @@ html{
 
 .card-content {
   padding: 3rem;
-
 }
 
 .card-header {
