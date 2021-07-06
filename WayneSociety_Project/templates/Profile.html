@@ -13,23 +13,27 @@
 </head>
 
 <body>
-    <h1 class="title">
-        <!-- {{name }} will render the current user logged in -->
-        Name:   {{ name }}!
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        Email: {{ email }}
-        
-      </h1>
 
-
-      {% endblock %}
-
+      <div class="wrapper">
+		<div class="wrapper-inner">
+			<div class="box-wrapper">
+				<div class="box">
+					<div class="box-inner">
+						<h3 class="title" style="font-family: 'Montserrat', sans-serif">Name:   {{ name }}</h3>
+                        <br>
+                        <br>
+                        <br>
+						<h4 class="title" style="font-family: 'Montserrat', sans-serif">Email: {{ email }}</h4>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+      
     </body>
 
 
 
 </html>
+{% endblock %}
