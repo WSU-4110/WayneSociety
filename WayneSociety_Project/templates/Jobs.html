@@ -1,64 +1,139 @@
-{% extends "NavRender.html" %}
+{% extends "NavRender.html" %}<!--nav bar-->
 
 {% block content %}
-
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-    <link rel="stylesheet" href="/static/css/index.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Jobs.css')}}">
-    <title>Jobs</title>
+  <meta charset="UTF-8">
+  <title>CodePen - Expanding Card Grid With Flexbox</title>
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px|Yesteryear'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/Jobs.css')}}">
 </head>
-
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                
-<!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="jobs.css"><!--link to styles sheet-->
-<link rel="stylesheet" href="/static/css/Attractions.css">
-<link rel="stylesheet" href="/static/css/index.css">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Jobs</title> 
-   <body>
-    <h1 class="title">
-        Jobs Page
-      </h1>
-      
-      
-</body>
-
-</html>
-<div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-  </div>
-  <div class="card" style="width: 18rem;"><!--cards format for each place-->
-    <img class="card-img-top" src="dia.jpg"alt=" picture" width="360" height="250"><!--image of dia-->
-    <div class="card-body">
-      <h5 class="card-title">Jobs</h5>
-      <p class="card-text">Address: </p>
-    </div>
-            </div>
-        </div>
-    </section>
-</html>
+<body>
+	<!-- partial:index.partial.html -->
+	<div class="wrapper">
+	
+	  <div class="header">
+		<h1 class="header__title">JOBS</h1>
+		<h2 class="header__subtitle">Opening in Wayne</h2>
+	  </div>
+	
+	  <div class="cards">
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			On our team, everyone plays a critical role providing genuine, helpful and friendly service to help our athletes perform at their best and enjoy their sport.
+			We’re committed to creating an inclusive and diverse workforce, reflecting the communities we serve. 
+			This role is an opportunity to make a difference and join the world’s greatest sports team
+		  </div>
+		</div>
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			On our team, everyone plays a critical role providing genuine, helpful and friendly service to help our athletes perform at their best and enjoy their sport.
+			We’re committed to creating an inclusive and diverse workforce, reflecting the communities we serve. 
+			This role is an opportunity to make a difference and join the world’s greatest sports team
+		  </div>
+		</div>
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			On our team, everyone plays a critical role providing genuine, helpful and friendly service to help our athletes perform at their best and enjoy their sport.
+			We’re committed to creating an inclusive and diverse workforce, reflecting the communities we serve. 
+			This role is an opportunity to make a difference and join the world’s greatest sports team
+		  </div>
+		</div>
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			Expander
+		  </div>
+		</div>
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			Expander
+		  </div>
+		</div>
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			Expander
+		  </div>
+		</div>
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			Expander
+		  </div>
+		</div>
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			Expander
+		  </div>
+		</div>
+	
+		<div class=" card [ is-collapsed ] ">
+		  <div class="card__inner [ js-expander ]">
+			<span>Card</span>
+			<i class="fa fa-folder-o"></i>
+		  </div>
+		  <div class="card__expander">
+			<i class="fa fa-close [ js-collapser ]"></i>
+			Expander
+		  </div>
+		</div>
+	
+	  </div>
+	
+	</div>
+	<!-- partial -->
+	  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	  <script src="{{url_for('static', filename='js/Jobs.js')}}"></script>
+	
+	</body>
+  </html>
 {% endblock %}
