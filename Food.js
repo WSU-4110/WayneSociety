@@ -3,7 +3,6 @@ function myJsFunction(){
     document.write(x);
 
  }
-
 // This creates a new empty Object
 
 var newObject = {};
