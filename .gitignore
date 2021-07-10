@@ -32,3 +32,6 @@ pip-selfcheck.json
 
 # Local History for Visual Studio Code
 .history/
+
+##Ignore env files
+env

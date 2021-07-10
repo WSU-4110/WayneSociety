@@ -146,8 +146,6 @@ def Logout():
     return redirect(url_for('Routing.Welcome'))
 
 
-Routing.route('/ResetPassword')
+@Routing.route('/ResetPassword')
 def resetPassword_request():
     return render_template('ResetPassowrd.html', title='Reset_Password')
-
-
