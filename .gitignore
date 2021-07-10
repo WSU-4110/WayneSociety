@@ -6,6 +6,6 @@ __pycache__/
 
 
 *.so
-db.sqlite3
+db.sqlite
 *.DS_Store
 
