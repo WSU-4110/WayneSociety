@@ -1,17 +1,16 @@
+# Removing pycache files
 *.pyo
 *.pyc
-
 __pycache__/
 *.py[cod]
 
-
+# Removing db
 *.so
 WayneSociety_Project/db.sqlite
 *.DS_Store
-
 *.sqlite
 
-
+# Removing all env
 .Python
 [Bb]in
 [Ii]nclude
