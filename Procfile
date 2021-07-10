@@ -1,1 +1,1 @@
-web: gunicorn Link:app
+web: gunicorn HerokuRun:app
