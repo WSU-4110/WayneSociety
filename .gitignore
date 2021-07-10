@@ -6,6 +6,7 @@ __pycache__/
 
 
 *.so
-db.sqlite
+WayneSociety_Project/db.sqlite
 *.DS_Store
 
+*.sqlite
