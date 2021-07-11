@@ -1,35 +1,46 @@
 h5 {
-    font-size:x-large;
+  font-size:x-large;
 }
 
 .card-deck{
-  font:white;
-  opacity:0.75; /* makes the page transparent*/
-  /*used so the cards will be side to side*/
-  display: inline-block;
-  /*width: 669px;*/
-  width: 660px; 
-  height: 775px;
-  float: left;
-  margin:5px
-  overflow-x: hidden;
-  overflow-y: auto;
+font:white;
+opacity:0.75; /* makes the page transparent*/
+width: 33.33%;
+height: 600px;
+float: left;
+display: flex;
+flex-flow: row wrap;
+/*overflows adds scroll*/
+overflow-x: hidden;
+overflow-y:auto;
+border: 10px ;
+padding: 0px 0px 0px 30px;
 }
 
-.card-deckLeft{ 
-  font:white;
-  opacity:0.75; /* makes the page transparent*/
-  /*used so the cards will be side to side*/
-  display: inline-block;
-  /*width: 669px;*/
-  width: 660px;
-  height: 775px;
-  float: right; 
-  margin:5px
-  overflow-x: hidden;
-  overflow-y: auto;
+/*Button Css*/
+a:hover {
+opacity: 1;
+}
+
+button {
+border-radius: 4px;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+background-color: #38A0D0;
+opacity: 1;
+transition: all 400ms;
+}
+
+button:hover {
+background-color: #96d1ec;
+}
 
 }
+
+
+
+
 
 
 
