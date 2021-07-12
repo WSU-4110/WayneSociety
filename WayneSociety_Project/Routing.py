@@ -14,7 +14,7 @@ from flask_login import login_required
 from .models import User
 from .import db
 import uuid
-from flask import Flask
+
 
 
 def make_key():
