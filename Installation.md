@@ -32,7 +32,7 @@ Advice: Use CMD instead of PowerShell
 > py -3 -m venv venv
 > venv\Scripts\activate
 > set FLASK_APP=WayneSociety_Project
-> setFLASK_DEBUG=1
+> set FLASK_DEBUG=1
 > flask run
 On Browser, Open http://localhost:5000/ to view website
 ```
