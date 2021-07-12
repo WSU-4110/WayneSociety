@@ -14,13 +14,10 @@ from flask_login import login_required
 from .models import User
 from .import db
 import uuid
+from flask import Flask
 
 
-
-def make_key():
-    return uuid.uuid4()
-
-
+app = Flask(__name__)
 Routing = Blueprint('Routing', __name__)
 # Routing = Flask(__name__)
 
@@ -154,3 +151,5 @@ def resetPassword_request():
 
     # web: gunicorn Routing:app
 
+if __name__ == "__main__":
+    app.run(debug=True)
