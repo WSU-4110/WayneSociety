@@ -8,6 +8,26 @@ h5 {
   /*used so the cards will be side to side*/
   display: inline-block;
   /*width: 669px;*/
+  width: 660px; 
+  height: 775px;
+  float: left;
+  margin:5px
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.card-deckLeft{ 
+  font:white;
+  opacity:0.75; /* makes the page transparent*/
+  /*used so the cards will be side to side*/
+  display: inline-block;
+  /*width: 669px;*/
+  width: 660px;
+  height: 775px;
+  float: right; 
+  margin:5px
+  overflow-x: hidden;
+  overflow-y: auto;
 
 }
 

@@ -5,4 +5,3 @@ from . import db
 
 
 app = Blueprint('app', __name__)
-
