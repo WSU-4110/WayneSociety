@@ -1,1 +1,3 @@
-web: gunicorn HerokuRun:app
+web: gunicorn flask run
+
+

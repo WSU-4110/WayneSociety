@@ -14,6 +14,7 @@ from flask_login import login_required
 from .models import User
 from .import db
 import uuid
+from flask import Flask
 
 
 def make_key():
@@ -21,6 +22,7 @@ def make_key():
 
 
 Routing = Blueprint('Routing', __name__)
+# Routing = Flask(__name__)
 
 
 # Landing page when server starts running
@@ -149,3 +151,6 @@ def Logout():
 @Routing.route('/ResetPassword')
 def resetPassword_request():
     return render_template('ResetPassowrd.html', title='Reset_Password')
+
+    # web: gunicorn Routing:app
+

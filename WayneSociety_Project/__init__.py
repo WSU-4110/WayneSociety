@@ -32,8 +32,6 @@ def create_app():
         return User.query.get(int(Get_User_id))
 
 
-
-
     from .Routing import Routing as Routing_blueprint
     app.register_blueprint(Routing_blueprint)
 
