@@ -1,12 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
 h5 {
     font-size:x-large;
 }
 
-.card-deck{
-  font:white;
-  opacity:0.75; /* makes the page transparent*/
-  /*used so the cards will be side to side*/
-  display: inline-block;
-  /*width: 669px;*/
 
+/*float 3 columns side by side*/
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 0 10px;
+}
+
+/*remove extra left and right margins*/
+.row {
+  margin: 0 -5px;
+}
+
+.rowbreak{
+  background-color: rgba(0,0,0,0);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  opacity: 0;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+}
+
+/*switch to one column on small screens*/
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
