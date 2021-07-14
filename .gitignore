@@ -1,0 +1,37 @@
+# Removing pycache files
+*.pyo
+*.pyc
+__pycache__/
+*.py[cod]
+
+# Removing db
+*.so
+WayneSociety_Project/db.sqlite
+*.DS_Store
+*.sqlite
+
+# Removing all env
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+##Ignore env files
+env
