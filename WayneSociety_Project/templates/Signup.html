@@ -31,7 +31,7 @@
                 if Information Exist, re-route to login page
             -->
       <div class="notification is-danger">
-        {{ messages[0] }}. Please go to <a href="{{ url_for('Routing.Login') }}">login page</a>.
+        {{ messages[0] }}. Please go to <a href="{{ url_for('Login') }}">login page</a>.
       </div>
       {% endif %}
       {% endwith %}
@@ -65,7 +65,7 @@
     <button class="button is-block is-info is-large is-fullwidth">Create Account</button>
     </form>
   </div>
-  <h3> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Already have an account? Login <a href="{{ url_for('Routing.Login') }}" style="color: #38A0D0;">Here</a></h3>
+  <h3> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Already have an account? Login <a href="{{ url_for('Login') }}" style="color: #38A0D0;">Here</a></h3>
   </div>
 
   <script>
