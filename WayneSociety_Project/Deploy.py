@@ -33,7 +33,7 @@ Set_Login.login_view = 'app.Login'
 Set_Login.init_app(app)
 
 
-
+# Loading users
 @Set_Login.user_loader
 def Loader_User(Get_User_id):
     return User.query.get(int(Get_User_id))
