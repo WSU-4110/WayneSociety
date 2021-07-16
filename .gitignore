@@ -1,7 +1,7 @@
 # Removing pycache files
 *.pyo
 *.pyc
-__pycache__/
+__pycache__
 *.py[cod]
 
 # Removing db
@@ -34,4 +34,4 @@ pip-selfcheck.json
 .history/
 
 ##Ignore env files
-env
+.env

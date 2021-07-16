@@ -24,6 +24,7 @@ def create_app():
     Set_Login = LoginManager()
     Set_Login.login_view = 'Routing.Login'
     Set_Login.init_app(app)
+               
 
     from .models import User
 
