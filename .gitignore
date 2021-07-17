@@ -6,9 +6,8 @@ __pycache__
 
 # Removing db
 *.so
-WayneSociety_Project/db.sqlite
 *.DS_Store
-*.sqlite
+
 
 # Removing all env
 .Python
