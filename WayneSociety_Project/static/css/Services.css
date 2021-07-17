@@ -21,7 +21,6 @@ h5 {
 
 .rowbreak{
   background-color: rgba(0,0,0,0);
-<<<<<<< HEAD
 }
 
 .row:after {
@@ -45,8 +44,6 @@ h5 {
     display: block;
     margin-bottom: 20px;
   }
-=======
->>>>>>> 82ea7affe25d32ecab416729e6b193bc678d4820
 }
 
 .row:after {
