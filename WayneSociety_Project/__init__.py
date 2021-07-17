@@ -15,15 +15,13 @@ def create_app():
     app = Flask(__name__)
     app.secret_key = 'secretkeylol'
 
-    # This is to configue and setup database
-    app.config['SECRET_KEY'] = 'HHIIDUNUXUU&&DHKJI' #Temporary
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 
     db.init_app(app)
    
     Set_Login = LoginManager()
     Set_Login.login_view = 'Routing.Login'
     Set_Login.init_app(app)
+               
 
     from .models import User
 
