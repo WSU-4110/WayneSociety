@@ -1,6 +1,7 @@
 # All Routing will be done here
 
 # Import Dependecies for Validation, Authorization and routing
+
 from flask_login import current_user
 from flask import Blueprint
 from flask import render_template, redirect
@@ -20,6 +21,12 @@ from flask import Flask
 app = Flask(__name__)
 Routing = Blueprint('Routing', __name__)
 # Routing = Flask(__name__)
+
+
+# If not logged in, throw 403 error
+def check_login():
+    if not current_user.is_authenticated:
+        abort(403)
 
 
 # Landing page when server starts running
@@ -95,6 +102,7 @@ def Get_Sign_Up():
 
 
 @Routing.route('/Jobs')
+@login_required
 def Jobs():
     return render_template('Jobs.html')
 
@@ -102,6 +110,7 @@ def Jobs():
 
 
 @Routing.route('/Attractions')
+@login_required
 def Attractions():
     return render_template('Attractions.html')
 

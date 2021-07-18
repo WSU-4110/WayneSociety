@@ -2,7 +2,7 @@ from flask_login import current_user
 from flask import Blueprint
 from flask import render_template, redirect
 from flask import url_for, request
-from flask import flash
+from flask import flash, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
@@ -13,6 +13,7 @@ from flask_login import UserMixin
 import uuid
 from flask import Flask
 from flask_login import LoginManager 
+from functools import wraps
 
 app = Flask(__name__)
 db = SQLAlchemy()
@@ -21,7 +22,9 @@ db = SQLAlchemy()
 
 # Working Model
 app.secret_key = 'secretkeylol'
-
+# This is to configue and setup database
+app.config['SECRET_KEY'] = 'HHIIDUNUXUU&&DHKJI' #Temporary
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 
 
 db.init_app(app)
@@ -43,6 +46,32 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
+
+
+
+# Handling page not found and errors
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+# Handing errors
+@app.errorhandler(405)
+def method_not_found(e):
+    return render_template('405.html'), 405
+
+
+# Create login_required function that checks if a user is logged in
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'logged_in' in session:
+            return f(*args, **kwargs)
+        else:
+            flash('You need to login first.')
+            return redirect(url_for('Login'))
+
+    return wrap
 
 # Landing page when server starts running
 @app.route('/')
@@ -116,19 +145,28 @@ def Get_Sign_Up():
     return redirect(url_for('Login'))
 
 
+
+
+
 @app.route('/Jobs')
+@login_required
 def Jobs():
+    
     return render_template('Jobs.html')
 
 # app for Attractions
 
 
+
 @app.route('/Attractions')
+@login_required
 def Attractions():
     return render_template('Attractions.html')
 
 
+
 @app.route('/Services')
+@login_required
 def Services():
     return render_template('Services.html')
 
@@ -136,16 +174,19 @@ def Services():
 
 
 @app.route('/Events')
+@login_required
 def Events():
     return render_template('Events.html')
 
 
 @app.route('/Food')
+@login_required
 def Food():
     return render_template('Food.html')
 
 
 @app.route('/AboutUs')
+@login_required
 def AboutUs():
     return render_template('AboutUs.html')
 
@@ -155,6 +196,7 @@ def AboutUs():
 
 
 @app.route('/Profile')
+@login_required
 def Profile():
     return render_template('Profile.html', name=current_user.name, email=current_user.email)
 
@@ -171,7 +213,7 @@ def Logout():
 def resetPassword_request():
     return render_template('ResetPassowrd.html', title='Reset_Password')
 
-    # web: gunicorn app:app
+
 
 if __name__ == "__main__":
     app.run(debug=True)

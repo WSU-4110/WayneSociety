@@ -19,6 +19,7 @@ passcodes.special = (/[!\"$%&/()=?@~`\\.\';:+=^*_-]+/.test(password))?true:false
 passcodes.count = (password.length > 7)?true:false;
 
 
+
 let barLength = Object.values(passcodes).filter(value=>value);
 
   console.log(Object.values(passcodes), barLength);
