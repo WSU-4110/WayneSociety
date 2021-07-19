@@ -1,14 +1,13 @@
 # Removing pycache files
 *.pyo
 *.pyc
-__pycache__/
+__pycache__
 *.py[cod]
 
 # Removing db
 *.so
-WayneSociety_Project/db.sqlite
 *.DS_Store
-*.sqlite
+
 
 # Removing all env
 .Python
@@ -29,9 +28,10 @@ pip-selfcheck.json
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+vscode
 
 # Local History for Visual Studio Code
 .history/
 
 ##Ignore env files
-env
+.env

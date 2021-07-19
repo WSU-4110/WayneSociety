@@ -23,7 +23,6 @@ Priyam Amin (Team Leader + Project Lead)
 
 ## Back-End Developers
 ```
-Emran Rahman (UI + Backend)
 Caleb Obi (UI + Backend)
 ```
 

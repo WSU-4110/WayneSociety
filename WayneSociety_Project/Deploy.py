@@ -2,7 +2,7 @@ from flask_login import current_user
 from flask import Blueprint
 from flask import render_template, redirect
 from flask import url_for, request
-from flask import flash
+from flask import flash, session, g
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
@@ -13,6 +13,9 @@ from flask_login import UserMixin
 import uuid
 from flask import Flask
 from flask_login import LoginManager 
+from functools import wraps
+from flask import current_app
+
 
 app = Flask(__name__)
 db = SQLAlchemy()
@@ -21,10 +24,10 @@ db = SQLAlchemy()
 
 # Working Model
 app.secret_key = 'secretkeylol'
-
-    # This is to configue and setup database
+# This is to configue and setup database
 app.config['SECRET_KEY'] = 'HHIIDUNUXUU&&DHKJI' #Temporary
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+
 
 db.init_app(app)
    
@@ -45,6 +48,23 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
+
+
+
+# Handling page not found and errors
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+# Handing errors
+@app.errorhandler(403)
+def method_not_found(e):
+    return render_template('403.html'), 403
+
+
+# Create login_required function that checks if a user is logged in
+
 
 # Landing page when server starts running
 @app.route('/')
@@ -118,16 +138,18 @@ def Get_Sign_Up():
     return redirect(url_for('Login'))
 
 
+
+
+
 @app.route('/Jobs')
 def Jobs():
     return render_template('Jobs.html')
-
-# app for Attractions
 
 
 @app.route('/Attractions')
 def Attractions():
     return render_template('Attractions.html')
+
 
 
 @app.route('/Services')
@@ -163,7 +185,6 @@ def Profile():
 
 # app for Users loging out of platform
 @app.route('/Logout')
-@login_required
 def Logout():
     logout_user()
     return redirect(url_for('Welcome'))
@@ -173,7 +194,7 @@ def Logout():
 def resetPassword_request():
     return render_template('ResetPassowrd.html', title='Reset_Password')
 
-    # web: gunicorn app:app
+
 
 if __name__ == "__main__":
     app.run(debug=True)
