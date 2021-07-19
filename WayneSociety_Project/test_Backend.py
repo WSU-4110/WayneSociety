@@ -1,14 +1,26 @@
+from flask_login.utils import login_required
+from werkzeug.utils import redirect
+from werkzeug.wrappers import response
 from werkzeug.wrappers.response import Response
 from Deploy import app, db, User
 import unittest
 from flask import abort, url_for
 from flask_testing import TestCase
+from flask import render_template, redirect
 
 
 
-class TestBackendFunctions(unittest.TestCase):
+
+
+class TestRoutingFunctions(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
+
+
+    def test_setUp(self):
+        
+        self.app = app.test_client()
+        app.config['TESTING'] = True
 
     # Testing for Welcome Page Routing
     def test_welcome_page(self):
@@ -32,11 +44,13 @@ class TestBackendFunctions(unittest.TestCase):
         self.assertIn(b'Join WayneSociety Today', response.data)
 
 
+    # Ensure that About us Page require login
     #Testing for Jobs Page Routing
     def test_Jobs_page(self):
         response = self.app.get('/Jobs')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Jobs', response.data)
+        self.assertIn(b'JOBS', response.data)
+        
 
 
     #Testing for Attractions Page Routing
@@ -75,15 +89,32 @@ class TestBackendFunctions(unittest.TestCase):
         self.assertIn(b'Meet Our Developers', response.data)
 
         
-    
 
-    
+class TestErrorPages(unittest.TestCase):
+    def setUp(self):
+        self.app = app.test_client()
+
+
+    def test_setUp(self):
         
+        self.app = app.test_client()
+        app.config['TESTING'] = True
+
+
+    def test_404(self):
+        @app.errorhandler(404)
+        def page_not_found(e):
+            return render_template('404.html'), 404
+
+        response = self.app.get('/404')
+        self.assertEqual(response.status_code, 404)
+        self.assertIn(b'404 Error', response.data)
+
+
+
 
 
 
 
 if __name__ == '__main__':
     unittest_Main()
-
-

@@ -23,10 +23,6 @@ Routing = Blueprint('Routing', __name__)
 # Routing = Flask(__name__)
 
 
-# If not logged in, throw 403 error
-def check_login():
-    if not current_user.is_authenticated:
-        abort(403)
 
 
 # Landing page when server starts running

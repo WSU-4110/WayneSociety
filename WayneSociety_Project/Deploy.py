@@ -2,7 +2,7 @@ from flask_login import current_user
 from flask import Blueprint
 from flask import render_template, redirect
 from flask import url_for, request
-from flask import flash, session
+from flask import flash, session, g
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
@@ -14,6 +14,8 @@ import uuid
 from flask import Flask
 from flask_login import LoginManager 
 from functools import wraps
+from flask import current_app
+
 
 app = Flask(__name__)
 db = SQLAlchemy()
@@ -56,22 +58,13 @@ def page_not_found(e):
 
 
 # Handing errors
-@app.errorhandler(405)
+@app.errorhandler(403)
 def method_not_found(e):
-    return render_template('405.html'), 405
+    return render_template('403.html'), 403
 
 
 # Create login_required function that checks if a user is logged in
-def login_required(f):
-    @wraps(f)
-    def wrap(*args, **kwargs):
-        if 'logged_in' in session:
-            return f(*args, **kwargs)
-        else:
-            flash('You need to login first.')
-            return redirect(url_for('Login'))
 
-    return wrap
 
 # Landing page when server starts running
 @app.route('/')
@@ -149,24 +142,17 @@ def Get_Sign_Up():
 
 
 @app.route('/Jobs')
-@login_required
 def Jobs():
-    
     return render_template('Jobs.html')
-
-# app for Attractions
-
 
 
 @app.route('/Attractions')
-@login_required
 def Attractions():
     return render_template('Attractions.html')
 
 
 
 @app.route('/Services')
-@login_required
 def Services():
     return render_template('Services.html')
 
@@ -174,19 +160,16 @@ def Services():
 
 
 @app.route('/Events')
-@login_required
 def Events():
     return render_template('Events.html')
 
 
 @app.route('/Food')
-@login_required
 def Food():
     return render_template('Food.html')
 
 
 @app.route('/AboutUs')
-@login_required
 def AboutUs():
     return render_template('AboutUs.html')
 
@@ -196,14 +179,12 @@ def AboutUs():
 
 
 @app.route('/Profile')
-@login_required
 def Profile():
     return render_template('Profile.html', name=current_user.name, email=current_user.email)
 
 
 # app for Users loging out of platform
 @app.route('/Logout')
-@login_required
 def Logout():
     logout_user()
     return redirect(url_for('Welcome'))
