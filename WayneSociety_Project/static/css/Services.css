@@ -65,6 +65,7 @@ h5 {
   height: 650px;
   overflow-y: auto;
   opacity: .85;
+  color: darkgrey
 }
 
 /*switch to one column on small screens*/
