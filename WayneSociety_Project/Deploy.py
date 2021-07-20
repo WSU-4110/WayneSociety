@@ -99,7 +99,7 @@ def Get_Login_Up():
         return redirect(url_for('Login'))
 
     login_user(Website_User, remember=Set_Remember)
-    return redirect(url_for('Home'))
+    return redirect(url_for('Jobs'))
 
 
 # app for Users to signup to use platform

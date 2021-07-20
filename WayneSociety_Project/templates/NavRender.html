@@ -26,13 +26,7 @@
                             </a>
                             {% endif %} 
 
-                            <!-- this means a User can only view this page if they are logged in, This page will be hidden when user is logged out  -->
-                            {% if current_user.is_authenticated %}
-                            <a href="{{ url_for('Home') }}" class="navbar-item">
-                                Home
-                            </a>
-                            {% endif %} 
-                            <!-- End -->
+                            
 
 
                             {% if current_user.is_authenticated %}
@@ -119,4 +113,4 @@
 
 
 
-</html>5RT
+</html>
