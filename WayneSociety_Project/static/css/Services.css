@@ -21,7 +21,6 @@ h5 {
 
 .rowbreak{
   background-color: rgba(0,0,0,0);
-
 }
 
 .row:after {
@@ -36,6 +35,10 @@ h5 {
   padding: 16px;
   text-align: center;
   background-color: white;
+}
+
+.description {
+  text-align: center;
 }
 
 /*switch to one column on small screens*/
@@ -45,7 +48,6 @@ h5 {
     display: block;
     margin-bottom: 20px;
   }
-
 }
 
 .row:after {
@@ -60,6 +62,10 @@ h5 {
   padding: 16px;
   text-align: center;
   background-color: white;
+  height: 650px;
+  overflow-y: auto;
+  opacity: .85;
+  color: darkgrey
 }
 
 /*switch to one column on small screens*/

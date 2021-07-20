@@ -21,15 +21,27 @@
     <script class="u-script" type="text/javascript" src="main.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.16.1, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+    <script>
+      function expandCard(id){
+        document.getElementById(id).style.opacity = 1
+        document.getElementById(id).style.color = "black"
+      }
+      function revertCard(id){
+        document.getElementById(id).style.opacity = .85
+        document.getElementById(id).style.color = "darkgray"
+      }
+    </script>
     
   <body>
     <h1 class = "title">
       Services
     </h1>
+    <p class = "description">Below you will find a handpicked list of highly rated businesses located across Wayne County that offer various services, such as landscaping, garbage removal, and much more! Click the addresses to view the where these businesses are located, or  click above the image to be taken to that businesses website for more information.</p>
     
     <div class = "row">
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "1" onmouseenter="expandCard(1)" onmouseleave="revertCard(1)">
         <div class = "card-body">
           <h5 class = "card-title"><b>TruGreen Lawn Care</b><br></h5> <!--card-->
           <p>Phone Number: (734)-281-8655 </p><br>
@@ -49,7 +61,7 @@
     </div>
 
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "2" onmouseenter="expandCard(2)" onmouseleave="revertCard(2)">
         <div class = "card-body">
           <h5 class = "card-title"><b>Ace Dumpster Service</b><br></h5> <!--card-->
           <p>Phone Number: (734)-772-9223 </p><br>
@@ -68,7 +80,7 @@
     </div>
 
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "3" onmouseenter="expandCard(3)" onmouseleave="revertCard(3)">
         <div class = "card-body">
           <h5 class = "card-title"><b>Blue Diamond Limousine Worldwide</b><br></h5> <!--card-->
           <p class = "desrcription"><!--description--> Blue Diamond can meet a wide variety of your transport need, offering luxurious coprorate transportation for both small and large companies. Whether you need to travel longer distances or just travel locally, Blue Diamond can meet your needs, even if you need to book transportation last minute.
@@ -92,27 +104,26 @@
 
   <div class = "row">
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "4" onmouseenter="expandCard(4)" onmouseleave="revertCard(4)">
         <div class = "card-body">
-          <h5 class = "card-title"><b>TruGreen Lawn Care</b><br></h5> <!--card-->
-          <p>Phone Number: (734)-281-8655 </p><br>
-          <p class = "desrcription"><!--description--> TruGreen Lawn Care offers a variety of lawn services, such as Ween Control, Fertilication, Tailored Lawn Treatment, and much more, across Wayne County, all at a very affordable price. You can also check out their "TruSignature" package to include the treatment of aeration & overseeding, and trees & shrubcare. <br>
-            <a href = "https://en.wikipedia.org/wiki/Scotts_LawnService"><b>link to wiki</b></a>
+          <h5 class = "card-title"><b>Canine to Five</b><br></h5> <!--card-->
+          <p>Phone Number: (313)-831-3647 </p><br>
+          <p class = "desrcription"><!--description--> Canine to Five has been providing a fun and safe Dog Daycare and Dog Boarding environment to dogs across Metro Detroit since 2005. They offer playrooms specifically catered towards your dogs age and size, and pride themselves on their high staffing ratio, spacious outdoor play yards, and attended overnight Dog Boarding. <br>
           </p> <br>
-          <p class = "time">Hours: <br> Everyday: 8:00 am - 10:00 pm<br><!--days and time open-->
+          <p class = "time">Hours: <br> Monday - Friday: 6:30 am - 8:00 pm <br> Saturday: 8:00 am - 6:00 pm <br> Sunday: 8:00 am - 10:00 am, 5:00 pm - 7:00 pm <br> <!--days and time open-->
             <br><br></p>
             <!-- provides location and once you click it will redirect to google maps in a new tab-->
-            <p class = "location"><a href = "https://www.google.com/maps/place/TruGreen+Lawn+Care/@42.1841403,-83.4970554,10z/data=!4m9!1m2!2m1!1strugreen+lawn+care+near+Detroit,+MI!3m5!1s0x0:0x59fd2bf1e4581ace!8m2!3d42.1841532!4d-83.2510402!15sCiN0cnVncmVlbiBsYXduIGNhcmUgbmVhciBEZXRyb2l0LCBNSSIDiAEBWiQiInRydWdyZWVuIGxhd24gY2FyZSBuZWFyIGRldHJvaXQgbWmSARFsYXduX2NhcmVfc2VydmljZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOcE4yWkljbmxCUlJBQg" target = "_blank">
-              <b>22260 Pennsylvania Rd<br> Taylor, MI 48227</b></a><br> click for directions</a></p><br>
+            <p class = "location"><a href = "https://www.google.com/maps/place/Canine+To+Five/@42.3450075,-83.1305981,12z/data=!4m9!1m2!2m1!1scanine+to+five!3m5!1s0x8824d2b43448c3e7:0xe8efad4cf72c5c46!8m2!3d42.3450098!4d-83.0605492!15sCg5jYW5pbmUgdG8gZml2ZSIDiAEBkgETZG9nX2RheV9jYXJlX2NlbnRlcg" target = "_blank">
+              <b>3433 Cass Ave<br> Detroit, MI 48201</b></a><br> click for directions</a></p><br>
         </div>
-        <small class = "text-muted"><a href = "https://www.trugreen.com/" target = "_blank"><b>click to view official website</b></a></small>
-        <img src = "static\images\TruGreen.jpg" class = "card-img-top" alt = "">
+        <small class = "text-muted"><a href = "https://www.caninetofive.com/midtown-location/" target = "_blank"><b>click to view official website</b></a></small>
+        <img src = "static\images\CanineToFive.jpg" class = "card-img-top" alt = "">
 
       </div>
     </div>
 
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "5" onmouseenter="expandCard(5)" onmouseleave="revertCard(5)">
         <div class = "card-body">
           <h5 class = "card-title"><b>Ace Dumpster Service</b><br></h5> <!--card-->
           <p>Phone Number: (734)-772-9223 </p><br>
@@ -131,7 +142,7 @@
     </div>
 
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "6" onmouseenter="expandCard(6)" onmouseleave="revertCard(6)">
         <div class = "card-body">
           <h5 class = "card-title"><b>Blue Diamond Limousine Worldwide</b><br></h5> <!--card-->
           <p class = "desrcription"><!--description--> Blue Diamond can meet a wide variety of your transport need, offering luxurious coprorate transportation for both small and large companies. Whether you need to travel longer distances or just travel locally, Blue Diamond can meet your needs, even if you need to book transportation last minute.
@@ -155,7 +166,7 @@
 
   <div class = "row">
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "7" onmouseenter="expandCard(7)" onmouseleave="revertCard(7)">
         <div class = "card-body">
           <h5 class = "card-title"><b>TruGreen Lawn Care</b><br></h5> <!--card-->
           <p>Phone Number: (734)-281-8655 </p><br>
@@ -175,7 +186,7 @@
     </div>
 
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "8" onmouseenter="expandCard(8)" onmouseleave="revertCard(8)">
         <div class = "card-body">
           <h5 class = "card-title"><b>Ace Dumpster Service</b><br></h5> <!--card-->
           <p>Phone Number: (734)-772-9223 </p><br>
@@ -194,7 +205,7 @@
     </div>
 
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "9" onmouseenter="expandCard(9)" onmouseleave="revertCard(9)">
         <div class = "card-body">
           <h5 class = "card-title"><b>Blue Diamond Limousine Worldwide</b><br></h5> <!--card-->
           <p class = "desrcription"><!--description--> Blue Diamond can meet a wide variety of your transport need, offering luxurious coprorate transportation for both small and large companies. Whether you need to travel longer distances or just travel locally, Blue Diamond can meet your needs, even if you need to book transportation last minute.
@@ -218,7 +229,7 @@
 
   <div class = "row">
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id ="10" onmouseenter="expandCard(10)" onmouseleave="revertCard(10)">
         <div class = "card-body">
           <h5 class = "card-title"><b>TruGreen Lawn Care</b><br></h5> <!--card-->
           <p>Phone Number: (734)-281-8655 </p><br>
@@ -238,13 +249,13 @@
     </div>
 
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "11" onmouseenter="expandCard(11)" onmouseleave="revertCard(11)">
         <div class = "card-body">
           <h5 class = "card-title"><b>Ace Dumpster Service</b><br></h5> <!--card-->
           <p>Phone Number: (734)-772-9223 </p><br>
           <p class = "desrcription"><!--description--> Ace Dumpster Service offers Dumpster rental and trash removal for anybody that has any sort of project that requires trash removal across Wayne County. They will even deliver a dumpster of whatever size your project requires at  price you can afford, and remove the filled dumpster for you when it is no longer needed.
           </p> <br>
-          <p class = "time">Hours: <br> Monday-Friday: 7:00 am - 6:00 pm<br> Saturday: 7:00 am - 1:00 pm<br> Sunday: 3:00 pm - 7:00 pm<br><!--days and time open-->
+          <p class = "time">Hours: <br> Monday - Friday: 7:00 am - 6:00 pm<br> Saturday: 7:00 am - 1:00 pm<br> Sunday: 3:00 pm - 7:00 pm<br><!--days and time open-->
             <br><br></p>
             <!-- provides location and once you click it will redirect to google maps in a new tab-->
             <p class = "location"><a href = "https://www.google.com/maps/place/Ace+Dumpster+-+Westland+-+Dump+Truck+Rentals+Service,+Dumpster+Rental+Company+Westland+MI/@42.274041,-83.3177437,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x8824b466233cc7d1:0x288ab4868c967ac1!2sAce+Dumpster+-+Dumpster+Service,+Dump+Truck+Service,Trash+removal,Dumpster+Rental+-Livonia+MI!8m2!3d42.2398125!4d-83.2109745!3m4!1s0x883b495e17a00379:0xd4652a295f124f58!8m2!3d42.274041!4d-83.315555" target = "_blank">
@@ -257,7 +268,7 @@
     </div>
 
     <div class = "column">
-      <div class = "card">
+      <div class = "card" id = "12" onmouseenter="expandCard(12)" onmouseleave="revertCard(12)">
         <div class = "card-body">
           <h5 class = "card-title"><b>Blue Diamond Limousine Worldwide</b><br></h5> <!--card-->
           <p class = "desrcription"><!--description--> Blue Diamond can meet a wide variety of your transport need, offering luxurious coprorate transportation for both small and large companies. Whether you need to travel longer distances or just travel locally, Blue Diamond can meet your needs, even if you need to book transportation last minute.
