@@ -1,5 +1,6 @@
 
 from flask import Flask
+import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager 
 from flask import Flask, request, render_template, redirect, session, url_for
@@ -13,10 +14,9 @@ db = SQLAlchemy()
 def create_app():
     
     app = Flask(__name__)
-    app.secret_key = 'secretkeylol'
-        # This is to configue and setup database
-    app.config['SECRET_KEY'] = 'HHIIDUNUXUU&&DHKJI' #Temporary
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+    app.secret_key = os.environ.get('SECRET_KEY')
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     db.init_app(app)
@@ -26,6 +26,7 @@ def create_app():
     Set_Login.init_app(app)
                
 
+ ## Setting current user to session
     from .models import User
 
     @Set_Login.user_loader
@@ -39,8 +40,6 @@ def create_app():
     
     from .app import app as app_blueprint
     app.register_blueprint(app_blueprint)
-
-
 
 
     return app

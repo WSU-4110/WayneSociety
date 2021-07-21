@@ -1,0 +1,19 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "## WayneSociety Project: https://github.com/WSU-4110/WayneSociety/wiki",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WSU-4110/WayneSociety.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WSU-4110/WayneSociety/issues"
+  },
+  "homepage": "https://github.com/WSU-4110/WayneSociety#readme"
+}
