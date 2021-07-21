@@ -1,6 +1,7 @@
 # All Routing will be done here
 
 # Import Dependecies for Validation, Authorization and routing
+
 from flask_login import current_user
 from flask import Blueprint
 from flask import render_template, redirect
@@ -20,6 +21,8 @@ from flask import Flask
 app = Flask(__name__)
 Routing = Blueprint('Routing', __name__)
 # Routing = Flask(__name__)
+
+
 
 
 # Landing page when server starts running
@@ -95,6 +98,7 @@ def Get_Sign_Up():
 
 
 @Routing.route('/Jobs')
+@login_required
 def Jobs():
     return render_template('Jobs.html')
 
@@ -102,6 +106,7 @@ def Jobs():
 
 
 @Routing.route('/Attractions')
+@login_required
 def Attractions():
     return render_template('Attractions.html')
 
@@ -150,6 +155,8 @@ def resetPassword_request():
     return render_template('ResetPassowrd.html', title='Reset_Password')
 
     # web: gunicorn Routing:app
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
