@@ -141,7 +141,7 @@ def Signup():
 @app.route('/Signup', methods=['POST'])
 def Get_Sign_Up():
 
-    sitekey = "6Lcqp64bAAAAAO-aJ2Dd99bwYqK__B6FVods6gTB"
+    sitekey = os.environ.get('RECAPTCHA_SITE_KEY')
 
 
     Get_Email = request.form.get('email')
@@ -156,7 +156,7 @@ def Get_Sign_Up():
     if request.method == 'POST':
         captcha_resonse = request.form.get('g-recaptcha-response')
 
-        if Validate_Recaptcha(captcha_resonse, sitekey) == True:
+        if Validate_Recaptcha(captcha_resonse) == True:
             if not Website_User:
                 new_user = User(email=Get_Email, name=Get_Name, password=Get_Password)
                 db.session.add(new_user)
@@ -194,7 +194,7 @@ def Validate_Recaptcha(captcha_response):
     Returns True captcha test passed for submitted form else returns False.
     """
 
-    secret = "6Lcqp64bAAAAALDL3Ctg3JrodEk-ct02-0NolRYc"
+    secret = os.environ.get('RECAPTCHA_SECRET_KEY')
     payload = {'response': captcha_response, 'secret': secret}
     response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
     response_text = response.json()
