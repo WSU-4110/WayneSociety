@@ -305,3 +305,18 @@
         speed: 500,
         heightMargin: 50
       });
+
+{
+ "name": "jest-e2e",
+ "version": "1.0.0",
+ "description": "",
+ "main": "index.js",
+ "scripts": {
+   "test": "jest"
+ },
+ "author": "",
+ "license": "ISC",
+ "dependencies": {
+   "jest": "^25.1.0"
+ }
+}
