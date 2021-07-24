@@ -6,14 +6,12 @@
         "-p",
         "test_*.py"
     ],
-    "python.linting.pylintArgs": [
-        "--disable=C0103"
-    ],
+    
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.unittestEnabled": true,
     "git.ignoreLimitWarning": true,
-    "python.linting.pylintEnabled": true
+    
 
     
 }

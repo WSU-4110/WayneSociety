@@ -1,12 +1,50 @@
+from enum import unique
 import os
+from os import environ, path
+from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import login_user, logout_user, current_user, UserMixin, LoginManager
+from flask_login import login_user, logout_user, current_user, UserMixin, LoginManager, login_required
 from flask import Flask, flash, url_for, request, render_template, redirect
 import requests
 
+basedir = path.abspath(path.dirname(__file__))
+load_dotenv(path.join(basedir, '.env'))
+
+
+
+class Config:
+    """
+    Set Flask configuration from environment variables
+    """
+
+    
+    SQLALCHEMY_ECHO = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+
+class DevelopmentConfig(Config):
+    """
+    Development configurations
+    """
+
+    SQLALCHEMY_ECHO = True
+
+
+class ProductionConfig(Config):
+    """
+    Production configurations
+    """
+
+    DEBUG = False
+
+
+
 app = Flask(__name__)
 db = SQLAlchemy()
+
+
+
 
 # Working Model
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
@@ -14,13 +52,15 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
     'SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+
+
 # get reCapthat keys from environment variables
 app.secret_key = os.environ.get('RECAPTCHA_SECRET_KEY')
 
 # DB Initalization
 db.init_app(app)
 Set_Login = LoginManager()
-Set_Login.login_view = 'app.Login'
+Set_Login.login_view = 'Login'
 Set_Login.init_app(app)
 
 
@@ -30,18 +70,46 @@ def Loader_User(Get_User_id):
     return User.query.get(int(Get_User_id))
 
 # Database Models
-
-
 class User(UserMixin, db.Model):
     # primary keys are required by SQLAlchemy
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(100), unique=True)
-    password = db.Column(db.String(100))
-    name = db.Column(db.String(1000))
+    id = db.Column(
+        db.Integer, 
+        primary_key=True)
+
+    email = db.Column(
+        db.String(100), 
+        unique=True,
+        nullable=False)
+
+    password = db.Column(
+        db.String(100),
+        primary_key=False,
+        unique=False,
+        nullable=False)
+
+    name = db.Column(
+        db.String(1000),
+        nullable=False,
+        unique=False)
+
+
+    
+    def set_password(self, password):
+        """Create hashed password."""
+        self.password = generate_password_hash(
+            password,
+            method='sha256'
+        )
+
+    def check_password(self, password):
+        """Check hashed password."""
+        return check_password_hash(self.password, password)
+
+    def __repr__(self):
+        return '<User {}>'.format(self.username)
+        
 
 # Handling page not found errors
-
-
 @app.errorhandler(404)
 def page_not_found(e):
     """
@@ -179,66 +247,72 @@ def Validate_Recaptcha(captcha_response):
 
 
 @app.route('/Jobs')
+@login_required
 def Jobs():
     return render_template('Jobs.html')
 
 # Routing for Attractions
-
-
 @app.route('/Attractions')
+@login_required
 def Attractions():
     return render_template('Attractions.html')
 
 # Routing for Services
-
-
 @app.route('/Services')
+@login_required
 def Services():
     return render_template('Services.html')
 
 # Routing for Events
-
-
 @app.route('/Events')
+@login_required
 def Events():
     return render_template('Events.html')
 
 # Routing for Food
-
-
 @app.route('/Food')
+@login_required
 def Food():
     return render_template('Food.html')
 
 # Routing for AbousUs
-
-
 @app.route('/AboutUs')
+@login_required
 def AboutUs():
     return render_template('AboutUs.html')
 
 # Routing for Users to view their profile
 # We should also show the users information on this page so they know they are currently logged in
-
-
 @app.route('/Profile')
+@login_required
 def Profile():
     return render_template('Profile.html', name=current_user.name, email=current_user.email)
 
 # Routing for Users loging out of platform
-
-
 @app.route('/Logout')
+@login_required
 def Logout():
     logout_user()
     return redirect(url_for('Welcome'))
 
 # Routing for users to reset their password
-
-
 @app.route('/ResetPassword')
+@login_required
 def ResetPassword():
-    return render_template('ResetPassword.html', title='Reset_Password')
+    return render_template('ResetPassword.html', 
+    title='Reset_Password')
+
+
+@app.route('/Terms')
+@login_required
+def Terms():
+    return render_template('Terms.html')
+
+
+@app.route('/Privacy')
+@login_required
+def Privacy():
+    return render_template('Privacy.html')
 
 
 if __name__ == "__main__":
