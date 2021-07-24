@@ -1,13 +1,20 @@
 {% extends "NavRender.html" %}
 
 {% block content %}
+<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 <div class="content-section">
     <div class="outer">
       <div class="middle">
         <div class="inner">
           <div style="text-align: center">
-              <h1> 500 Error </h1>
-              <h3> The server encountered an internal error. That's all we know. </h3>
+              <h1 style="font-family: 'Arvo', serif;"> 500 Error </h1>
+              <h3 style="font-family: 'Arvo', serif;"> The server encountered an internal error. That's all we know. </h3>
               <hr class="intro-divider">
               <a href="{{ url_for('Home') }}" class="btn btn-default btn-lg">
                   <i class="fa fa-home"></i>
