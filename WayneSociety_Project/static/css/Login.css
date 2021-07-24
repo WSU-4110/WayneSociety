@@ -1,3 +1,8 @@
 .forgot{
     color: white;
 }
+
+.navbar-item {
+    text-align: center;
+    right: 350px;
+  }
