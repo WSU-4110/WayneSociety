@@ -1,5 +1,6 @@
 {% extends "NavRender.html" %}
 
+
 {% block content %}
 
 
@@ -52,7 +53,8 @@
                 <button class="button is-block is-info is-large is-fullwidth">Login</button>
             </form>
             <br>
-            <p class="forgot">Forgot Password?</p>
+            <p class="forgot"><a href="{{ url_for('ResetPassword') }}" style="color: honeydew; font-weight: 800;">Forgot Password? </a></p>
+            
         </div>
         
     </div>

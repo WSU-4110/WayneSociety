@@ -35,3 +35,4 @@ vscode
 
 ##Ignore env files
 .env
+.pylintrc
