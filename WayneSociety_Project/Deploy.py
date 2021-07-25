@@ -27,7 +27,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 db.init_app(app)
    
 Set_Login = LoginManager()
-Set_Login.login_view = 'app.Login'
+Set_Login.login_view = 'Login'
 Set_Login.init_app(app)
 
 
@@ -91,7 +91,7 @@ def Get_Sign_Up():
     (e.g: password) and encrpyt it and store in the database
     """
 
-    sitekey = os.environ.get('RECAPTCHA_SITE_KEY')
+    
 
     Get_Email = request.form.get('email')
     Get_Name = request.form.get('name')
@@ -127,6 +127,7 @@ def Get_Sign_Up():
 
 
 @app.route('/Jobs')
+@login_required
 def Jobs():
     return render_template('Jobs.html')
 
@@ -134,11 +135,13 @@ def Jobs():
 
 
 @app.route('/Attractions')
+@login_required
 def Attractions():
     return render_template('Attractions.html')
 
 
 @app.route('/Services')
+@login_required
 def Services():
     return render_template('Services.html')
 
@@ -146,16 +149,19 @@ def Services():
 
 
 @app.route('/Events')
+@login_required
 def Events():
     return render_template('Events.html')
 
 
 @app.route('/Food')
+@login_required
 def Food():
     return render_template('Food.html')
 
 
 @app.route('/AboutUs')
+@login_required
 def AboutUs():
     return render_template('AboutUs.html')
 
