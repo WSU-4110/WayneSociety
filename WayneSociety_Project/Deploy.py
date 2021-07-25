@@ -1,11 +1,10 @@
 from enum import unique
 import os
-from os import environ, path
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, current_user, UserMixin, LoginManager, login_required
 from flask import Flask, flash, url_for, request, render_template, redirect
-import requests
+
 
 
 
@@ -194,15 +193,7 @@ def Get_Sign_Up():
     Website_User = User.query.filter_by(
         email=Get_Email).first()
 
-    captcha_response = request.form.get('g-recaptcha-response')
-
-    if Validate_Recaptcha(captcha_response):
-        status = "Submitted Successfully"
-
-    else:
-        status = "Invalid Captcha"
-
-    flash(status)
+    
 
     if Website_User:
         """
@@ -227,18 +218,7 @@ def Get_Sign_Up():
     return redirect(url_for('Login'))
 
 
-def Validate_Recaptcha(captcha_response):
-    """ 
-    Validating recaptcha response from google server
-    Returns True captcha test passed for submitted form else returns False.
-    """
 
-    secret = os.environ.get('RECAPTCHA_SECRET_KEY')
-    payload = {'response': captcha_response, 'secret': secret}
-    response = requests.post(
-        "https://www.google.com/recaptcha/api/siteverify", payload)
-    response_text = response.json()
-    return response_text['success']
 
 # Routing for Jobs
 
