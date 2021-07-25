@@ -37,12 +37,45 @@ def Loader_User(Get_User_id):
     return User.query.get(int(Get_User_id))
 
 
-
+## Creating the database
+# Query the database using the model
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True) # primary keys are required by SQLAlchemy
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
+
+
+
+# Handling page not found errors
+@app.errorhandler(404)
+def page_not_found(e):
+
+    """
+    Return a custom 404 error.
+    """
+    return render_template('404.html'), 404
+
+
+#Handling server errors
+@app.errorhandler(500)
+def server_error(e):
+
+    """
+    Return 500 http error
+    """
+    app.logger.error(f"Server error: {e}, route: {request.url}")
+    return render_template('500.html'), 500
+
+# Handing authentication errors
+@app.errorhandler(403)
+def not_authenticated(e):
+    """
+    Return 403 http error
+    """
+    app.logger.error(f"Server error: {e}, route: {request.url}")
+    return render_template('403.html'), 403
+
 
 # Landing page when server starts running
 @app.route('/')
@@ -55,8 +88,6 @@ def Home():
     return render_template('Home.html')
 
 # app for Users to Login to use platform
-
-
 @app.route('/Login')
 def Login():
     return render_template('Login.html')
@@ -79,11 +110,13 @@ def get_Login_Up():
     return redirect(url_for('Jobs'))
 
 
+# Routing for signup page
 @app.route('/Signup')
 def Signup():
     return render_template('Signup.html')
 
 
+# Setting up signup logic
 @app.route('/Signup', methods=['POST'])
 def Get_Sign_Up():
     """
@@ -99,8 +132,6 @@ def Get_Sign_Up():
 
     Website_User = User.query.filter_by(
         email=Get_Email).first()
-
-    
 
     if Website_User:
         """
@@ -126,40 +157,39 @@ def Get_Sign_Up():
     return redirect(url_for('Login'))
 
 
+# Routing for jobs page
 @app.route('/Jobs')
 @login_required
 def Jobs():
     return render_template('Jobs.html')
 
-# app for Attractions
-
-
+# Routing for Attractions
 @app.route('/Attractions')
 @login_required
 def Attractions():
     return render_template('Attractions.html')
 
-
+# Routing for Services
 @app.route('/Services')
 @login_required
 def Services():
     return render_template('Services.html')
 
 # app for Events
-
-
 @app.route('/Events')
 @login_required
 def Events():
     return render_template('Events.html')
 
 
+#Routing for Food
 @app.route('/Food')
 @login_required
 def Food():
     return render_template('Food.html')
 
 
+#Routing for AboutUs
 @app.route('/AboutUs')
 @login_required
 def AboutUs():
@@ -182,19 +212,20 @@ def Logout():
     return redirect(url_for('Welcome'))
 
 
+#Routing for Reset Password
 @app.route('/ResetPassword')
 @login_required
 def ResetPassword():
     return render_template('ResetPassword.html', 
     title='Reset_Password')
 
-
+#Routing for Terms and Conditions
 @app.route('/Terms')
 @login_required
 def Terms():
     return render_template('Terms.html')
 
-
+#Routing for Privacy Policy
 @app.route('/Privacy')
 @login_required
 def Privacy():
