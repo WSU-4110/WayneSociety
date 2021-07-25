@@ -1,6 +1,7 @@
 # All Routing will be done here
 
 # Import Dependecies for Validation, Authorization and routing
+
 from flask_login import current_user
 from flask import Blueprint
 from flask import render_template, redirect
@@ -22,6 +23,8 @@ Routing = Blueprint('Routing', __name__)
 # Routing = Flask(__name__)
 
 
+
+
 # Landing page when server starts running
 @Routing.route('/')
 def Welcome():
@@ -33,8 +36,6 @@ def Home():
     return render_template('Home.html')
 
 # Routing for Users to Login to use platform
-
-
 @Routing.route('/Login')
 def Login():
     return render_template('Login.html')
@@ -95,6 +96,7 @@ def Get_Sign_Up():
 
 
 @Routing.route('/Jobs')
+@login_required
 def Jobs():
     return render_template('Jobs.html')
 
@@ -102,6 +104,7 @@ def Jobs():
 
 
 @Routing.route('/Attractions')
+@login_required
 def Attractions():
     return render_template('Attractions.html')
 
@@ -111,18 +114,18 @@ def Services():
     return render_template('Services.html')
 
 # Routing for Events
-
-
 @Routing.route('/Events')
 def Events():
     return render_template('Events.html')
 
 
+# Routing for Food
 @Routing.route('/Food')
 def Food():
     return render_template('Food.html')
 
 
+# Routing for AboutUs
 @Routing.route('/AboutUs')
 def AboutUs():
     return render_template('AboutUs.html')
@@ -130,8 +133,6 @@ def AboutUs():
 
 # ROuting for Users to view their profile
 # We should also show the users information on this page so they know they are currently logged in
-
-
 @Routing.route('/Profile')
 def Profile():
     return render_template('Profile.html', name=current_user.name, email=current_user.email)
@@ -145,11 +146,10 @@ def Logout():
     return redirect(url_for('Routing.Welcome'))
 
 
+# Routing for resetpassword
 @Routing.route('/ResetPassword')
 def resetPassword_request():
     return render_template('ResetPassowrd.html', title='Reset_Password')
-
-    # web: gunicorn Routing:app
 
 if __name__ == "__main__":
     app.run(debug=True)

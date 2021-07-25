@@ -1,0 +1,185 @@
+.presentation-title {
+    font-size: 8em;
+    font-weight: 900px;
+    margin: 0;
+    color: #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+   .presentation-subtitle {
+      font-size: 600px;
+      color: white;
+      font-family: 'Brush Script MT', cursive;
+    }
+  
+  .btn {
+    box-sizing: border-box;
+    border-width: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.5rem 18px;
+    line-height: 1.75;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #66615B;
+    border-color: #66615B;
+    color: #FFFFFF;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: all 150ms linear;
+    -moz-transition: all 150ms linear;
+    -o-transition: all 150ms linear;
+    -ms-transition: all 150ms linear;
+    transition: all 150ms linear; 
+  }
+  
+  .btn-danger {
+    background-color: #38A0D0;
+    border-color: #38A0D0;
+    color: #FFFFFF;
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  
+  .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .show > .btn-danger.dropdown-toggle {
+    background-color: #96d1ec;
+    color: #FFFFFF;
+    border-color: #96d1ec;
+  }
+  
+  .btn-danger .caret {
+    border-top-color: #FFFFFF;
+  }
+  
+  .btn-danger .btn-link {
+    color: #38A0D0;
+  }
+  
+  .btn-danger .btn-link:hover, .btn-danger.btn-link:focus, .btn-danger.btn-link:active, .btn-danger.btn-link.active, .open > .btn-danger.btn-link.dropdown-toggle {
+    background-color: transparent;
+    color: #f33816;
+  } 
+  
+  .btn-danger.btn-link .caret {
+    border-top-color: #38A0D0;
+  }
+  
+  .btn-danger .caret {
+    border-top-color: #FFFFFF;
+  }
+  
+  .btn-round {
+    border-radius: 50px; 
+  }
+  
+  .navbar .navbar-brand {
+    font-weight: 800;
+    margin: 5px 0px;
+    padding: 20px 15px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .page-header {
+    background-color: #B2AFAB;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    max-height: 999px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .viewport-header {
+    position: center;
+    height: auto;
+    text-align: center;
+    display: center;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  }
+  
+  #myVideo  {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    overflow: hidden;
+  }
+  
+  .pp{
+  padding: 50px;
+  }
+  
+  .overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+  }
+  
+  .f{
+    font-size: 70px;
+   /* color: #96d1ec;*/
+    font-family: 'Brush Script MT', cursive;
+    color: white;
+    margin-top: -10cm;
+  }
+  
+  .s{
+    position:absolute;
+      float:left;
+    margin: 30px;
+    font-size: 50px;
+    color: #96d1ec;
+  }
+  
+  .g{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+  }
+  
+  .gg {
+       
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite; 
+     /* opacity: 0.5;*/
+  }
+    
+  @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    .aa{
+      position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 0px 160px 70px 0px;
+    }
+  

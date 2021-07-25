@@ -1,5 +1,6 @@
 {% extends "NavRender.html" %}
 
+
 {% block content %}
 
 
@@ -10,9 +11,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Login.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
     <title>Login</title>
 </head>
 <body>
+
+    
 
     <h1 class="title">Welcome Back :)</h1>
     <p class="paragraphs">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Login into your account to view all categories in the Wayne County Area, <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View services, attractions jobs and many more. </p>
@@ -50,7 +55,8 @@
                 <button class="button is-block is-info is-large is-fullwidth">Login</button>
             </form>
             <br>
-            <p class="forgot">Forgot Password?</p>
+            <p class="forgot"><a href="{{ url_for('ResetPassword') }}" style="color: honeydew; font-weight: 800;">Forgot Password? </a></p>
+            
         </div>
         
     </div>

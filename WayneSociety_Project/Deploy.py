@@ -1,35 +1,30 @@
-from flask_login import current_user
-from flask import Blueprint
-from flask import render_template, redirect
-from flask import url_for, request
-from flask import flash
+from enum import unique
+import os
+from os import environ
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash
-from werkzeug.security import check_password_hash
-from flask_login import login_user
-from flask_login import logout_user
-from flask_login import login_required
-from flask_login import UserMixin
-import uuid
-from flask import Flask
-from flask_login import LoginManager 
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import login_user, logout_user, current_user, UserMixin, LoginManager, login_required
+from flask import Flask, flash, url_for, request, render_template, redirect
+import requests
+
+
 
 app = Flask(__name__)
 db = SQLAlchemy()
 
 
 
+
 # Working Model
 app.secret_key = 'secretkeylol'
-
-    # This is to configue and setup database
-app.config['SECRET_KEY'] = 'HHIIDUNUXUU&&DHKJI' #Temporary
+# This is to configue and setup database
+app.config['SECRET_KEY'] = 'HHIIDUNUXUU&&DHKJI' 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 
+# DB Initalization
 db.init_app(app)
-   
 Set_Login = LoginManager()
-Set_Login.login_view = 'app.Login'
+Set_Login.login_view = 'Login'
 Set_Login.init_app(app)
 
 
@@ -38,13 +33,47 @@ Set_Login.init_app(app)
 def Loader_User(Get_User_id):
     return User.query.get(int(Get_User_id))
 
-
-
+# Database Models
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True) # primary keys are required by SQLAlchemy
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
+
+
+    
+   
+
+
+# Handling page not found errors
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Return a custom 404 error.
+    """
+    return render_template('404.html'), 404
+
+
+# Handling server errors
+@app.errorhandler(500)
+def server_error(e):
+    """
+    Return 503 http error
+    """
+    app.logger.error(f"Server error: {e}, route: {request.url}")
+    return render_template('500.html'), 500
+
+# Handing authentication errors
+
+
+@app.errorhandler(403)
+def not_authenticated(e):
+    """
+    Return 403 http error
+    """
+    app.logger.error(f"Server error: {e}, route: {request.url}")
+    return render_template('403.html'), 403
+
 
 # Landing page when server starts running
 @app.route('/')
@@ -65,12 +94,11 @@ def Login():
 
 
 @app.route('/Login', methods=['POST'])
-def Get_Login_Up():
+def get_Login_Up():
 
     Get_Email = request.form.get('email')
     Get_Password = request.form.get('password')
     Set_Remember = True if request.form.get('remember') else False
-
     Website_User = User.query.filter_by(email=Get_Email).first()
 
     # Validate Password, and check if the user data is in database
@@ -79,104 +107,129 @@ def Get_Login_Up():
         return redirect(url_for('Login'))
 
     login_user(Website_User, remember=Set_Remember)
-    return redirect(url_for('Home'))
-
+    return redirect(url_for('Jobs'))
 
 # app for Users to signup to use platform
+
+
 @app.route('/Signup')
 def Signup():
     return render_template('Signup.html')
 
-# We want to create a function that takes all the user information on the website (e.g: password) and encrpyt it and store in the database
-
 
 @app.route('/Signup', methods=['POST'])
 def Get_Sign_Up():
+    """
+    We want to create a function that takes all the user information on the website 
+    (e.g: password) and encrpyt it and store in the database
+    """
+
 
     Get_Email = request.form.get('email')
     Get_Name = request.form.get('name')
     Get_Password = request.form.get('password')
 
-    Website_User = User.query.filter_by(email=Get_Email).first()
+    Website_User = User.query.filter_by(
+        email=Get_Email).first()
 
-    # If user is already in in database re-route back to signup to re-attempt
+
     if Website_User:
+        """
+        # If user is already in in database 
+        # re-route back to signup to re-attempt
+        """
         # Flag a error message when a user is not logged in
         flash('Email address already exists')
         return redirect(url_for('Signup'))
 
     # If no user in database, procedd to get all email and password data, also hash password before storing
-    Website_New_User = User(email=Get_Email, name=Get_Name,
-                            password=generate_password_hash(Get_Password, method='sha256'))
+    Website_New_User = User(email=Get_Email,
+                            name=Get_Name,
+                            password=generate_password_hash(
+                                Get_Password, method='sha256'))
 
 # Storing New user in database, first we query the databse id to see if data already exist, if it doesn't we get the new data and store
     db.session.add(Website_New_User)
     db.session.commit()
 
-
 # Upon successful sign-up, route to login so users can login using their credentials
     return redirect(url_for('Login'))
 
 
+
+# Routing for Jobs
+
+
 @app.route('/Jobs')
+@login_required
 def Jobs():
     return render_template('Jobs.html')
 
-# app for Attractions
-
-
+# Routing for Attractions
 @app.route('/Attractions')
+@login_required
 def Attractions():
     return render_template('Attractions.html')
 
-
+# Routing for Services
 @app.route('/Services')
+@login_required
 def Services():
     return render_template('Services.html')
 
-# app for Events
-
-
+# Routing for Events
 @app.route('/Events')
+@login_required
 def Events():
     return render_template('Events.html')
 
-
+# Routing for Food
 @app.route('/Food')
+@login_required
 def Food():
     return render_template('Food.html')
 
-
+# Routing for AbousUs
 @app.route('/AboutUs')
+@login_required
 def AboutUs():
     return render_template('AboutUs.html')
 
-
-# app for Users to view their profile
+# Routing for Users to view their profile
 # We should also show the users information on this page so they know they are currently logged in
-
-
 @app.route('/Profile')
+@login_required
 def Profile():
     return render_template('Profile.html', name=current_user.name, email=current_user.email)
 
-
-# app for Users loging out of platform
+# Routing for Users loging out of platform
 @app.route('/Logout')
 @login_required
 def Logout():
     logout_user()
     return redirect(url_for('Welcome'))
 
-
+# Routing for users to reset their password
 @app.route('/ResetPassword')
-def resetPassword_request():
-    return render_template('ResetPassowrd.html', title='Reset_Password')
+@login_required
+def ResetPassword():
+    return render_template('ResetPassword.html', 
+    title='Reset_Password')
 
-    # web: gunicorn app:app
+
+
+@app.route('/Terms')
+@login_required
+def Terms():
+    return render_template('Terms.html')
+
+
+# Routing for private page
+@app.route('/Privacy')
+@login_required
+def Privacy():
+    return render_template('Privacy.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
