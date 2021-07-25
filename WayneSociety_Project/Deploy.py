@@ -1,15 +1,12 @@
 from enum import unique
 import os
 from os import environ, path
-from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, current_user, UserMixin, LoginManager, login_required
 from flask import Flask, flash, url_for, request, render_template, redirect
 import requests
 
-basedir = path.abspath(path.dirname(__file__))
-load_dotenv(path.join(basedir, '.env'))
 
 
 
@@ -55,7 +52,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 # get reCapthat keys from environment variables
-app.secret_key = os.environ.get('RECAPTCHA_SECRET_KEY')
+
 
 # DB Initalization
 db.init_app(app)
