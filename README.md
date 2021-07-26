@@ -18,6 +18,7 @@ Nathan Herskovitz (Software Developer)
 Anush Rajma (Software Developer)
 Ashraf Uddin (Software Developer)
 Nathan Herskovitz (Software Developer)
+Emran Rahman (Software Developer)
 Priyam Amin (Team Leader + Project Lead)
 ```
 
