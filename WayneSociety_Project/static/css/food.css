@@ -1,13 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans";
-}
 
-body {
-  background-color: #555;
-}
 
 .content-wrapper {
   margin: 0 auto;

@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/Signup.css')}}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src='https://www.google.com/recaptcha/api.js'></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
   <title>SignUp</title>
 </head>
 
@@ -64,9 +71,14 @@
        
 
         </div>
+          <br>
+        <!-- <p><input type="checkbox" name="terms"><p style="color: white;"> I accept the </p><u style="font-family: 'Arvo', serif; color: white;"><a href="Terms.html"> Terms and Conditions</a></u></p>
+        <br> -->
 
-
-        <button class="button is-block is-info is-large is-fullwidth">Create Account</button>
+        <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)"><u style="color: white; font-family: 'Arvo', serif;">  I Agree Terms & Coditions</u>
+        <br><br>
+        
+        <button class="button is-block is-info is-large is-fullwidth" id="submit">Create Account</button>
       </form>
     </div>
     <h3> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Already have an account? Login <a href="{{ url_for('Login') }}"
@@ -79,4 +91,23 @@
 </body>
 
 </html>
+
+
+
+<script>
+  function disableSubmit() {
+   document.getElementById("submit").disabled = true;
+  }
+ 
+   function activateButton(element) {
+ 
+       if(element.checked) {
+         document.getElementById("submit").disabled = false;
+        }
+        else  {
+         document.getElementById("submit").disabled = true;
+       }
+ 
+   }
+ </script>
 {% endblock %}
