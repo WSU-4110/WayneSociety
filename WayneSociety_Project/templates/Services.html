@@ -31,11 +31,13 @@
     <script>
       function expandCard(id){
         document.getElementById(id).style.opacity = 1
-        document.getElementById(id).style.color = "black"
       }
       function revertCard(id){
         document.getElementById(id).style.opacity = .85
-        document.getElementById(id).style.color = "darkgray"
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
     </script>
     
@@ -235,6 +237,131 @@
   <div class = "rowbreak">
     <br><br>
   </div>
+
+  <div class = "row">
+    <div class = "column">
+      <div class = "card" id = "10" onmouseenter="expandCard(10)" onmouseleave="revertCard(10)">
+        <div class = "card-body">
+          <h5 class = "card-title" style="font-family: 'Arvo', serif;"><b>Detroit Experience Factory</b><br></h5> <!--card-->
+          <p>Phone Number: (313)-962-4590 </p><br>
+          <p class = "desrcription" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description--> Whether you are new or just visiting the City of Detroit, or even if you would just like to learn more about the city, The Detroit Experience Factory is the place for you. Having taken over 130,000 people on experiential tours of Detroit since their launch in 2006, The Detroit Experience Factory offers Quality, educational tour of the city, both online or in person.<br></p> <br>
+          <p class = "time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Hours: <br> Monday - Friday: 10:00 am - 5:00 pm <br> Saturday: 10:30 am - 4:30 pm <br> Sunday: Closed <br><!--days and time open-->
+            <br><br></p>
+            <!-- provides location and once you click it will redirect to google maps in a new tab-->
+            <p class = "location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href = "https://www.google.com/maps/place/Detroit+Experience+Factory/@42.365054,-83.073021,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2d31b7631447:0x58879eb8da664c07!8m2!3d42.3648706!4d-83.0730045" target = "_blank">
+              <b>440 Burroughs St #332, <br> Detroit, MI 48202</b></a><br> click for directions</a></p><br>
+        </div>
+        <small class = "text-muted"><a href = "https://detroitexperiencefactory.org" target = "_blank"><b>click to view official website</b></a></small>
+        <img src = "static\images\DetroitExperience.jpg" class = "card-img-top" alt = "">
+
+      </div>
+    </div>
+
+    <div class = "column">
+      <div class = "card" id = "11" onmouseenter="expandCard(11)" onmouseleave="revertCard(11)">
+        <div class = "card-body">
+          <h5 class = "card-title" style="font-family: 'Arvo', serif;"><b>City Shield Security</b><br></h5> <!--card-->
+          <p>Phone Number: (313)-818-0280 </p><br>
+          <p class = "desrcription" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description--> City Shield Security offers contract based Security across Wayne County. They have a professionalized workforce ready to work for any special events and venues, special operations, critical infratructure protection, soft target protection, and district services.They are fully licensed and insured to work any long or short term, armed or unarmed security details.
+          </p> <br>
+          <p class = "time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Hours: <br> Monday-Friday: 9:30 am - 5:00 pm<br> Saturday-Sunday: Closed<br><!--days and time open-->
+            <br><br></p>
+            <!-- provides location and once you click it will redirect to google maps in a new tab-->
+            <p class = "location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href = "https://www.google.com/maps/place/City+Shield+Security+Services/@42.3400489,-83.2017273,11z/data=!4m9!1m2!2m1!1ssecurity+shield!3m5!1s0x8824d2b5b9f00001:0x757994a10c037ca3!8m2!3d42.3401008!4d-83.0614108!15sCg9zZWN1cml0eSBzaGllbGSSARBzZWN1cml0eV9zZXJ2aWNl" target = "_blank">
+              <b>2727 2nd Ave #322,<br> Detroit, MI 48201</b></a> <br>click for directions</a></p><br>
+        </div>
+        <small class = "text-muted"><a href = "https://cityshieldsecurity.com" target = "_blank"><b>click to view official website</b></a></small>
+        <img src = "static\images\CityShield.jpg" class = "card-img-top" alt = "">
+
+      </div>
+    </div>
+
+    <div class = "column">
+      <div class = "card" id = "12" onmouseenter="expandCard(12)" onmouseleave="revertCard(12)">
+        <div class = "card-body">
+          <h5 class = "card-title" style="font-family: 'Arvo', serif;"><b>GRO Marketing</b><br></h5> <!--card-->
+          <p class = "desrcription" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description--> 
+          </p> <br>
+          <p class = "time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Monday - Friday: 8:00 am - 5:00 pm<br> Saturday - Sunday: Closed <br><!--days and time open--> GRO Marketing is a full-service marketing agency that specializes in creative services, digital marketing, brand development, Search Engine Optimization, and Social Media. Their clients businesses focus on marktes such as healthcare, retail, student housing, and entertainment industries. Contact them now to help bring your business to the next level.
+            <br><br></p>
+            <!-- provides location and once you click it will redirect to google maps in a new tab-->
+            <p class = "location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href = "https://www.google.com/maps/place/GRO+Marketing/@42.334911,-83.050357,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2dd89fe64349:0xca9d1e2cc5f7ddfa!8m2!3d42.334908!4d-83.050589" target = "_blank">
+              <b>1514 Washington Blvd Suite 201, <br> Detroit, MI 48226</b></a> click for directions</a></p><br>
+        </div>
+        <small class = "text-muted"><a href = "https://letsgro.io/?gclid=EAIaIQobChMIh8GV867_8QIVcys4Ch29qgoAEAAYASAAEgK_UfD_BwE" target = "_blank"><b>click to view official website</b></a></small>
+        <img src = "static\images\GROMarketing.jpg" class = "card-img-top" alt = "">
+
+      </div>
+    </div>
+  </div>
+
+  <div class = "rowbreak">
+    <br><br>
+  </div>
+
+  <div class = "row">
+    <div class = "column">
+      <div class = "card" id = "13" onmouseenter="expandCard(13)" onmouseleave="revertCard(13)">
+        <div class = "card-body">
+          <h5 class = "card-title" style="font-family: 'Arvo', serif;"><b>McKinsey and Company</b><br></h5> <!--card-->
+          <p>Phone Number: (313)-202-5200 </p><br>
+          <p class = "desrcription" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description--> McKinsey and Company is a business consulting agency located in Detroit Michigan. Their goal is to assist organizations across the private, public, and social sectors create the change that matters most to them. They partner with their clients to transform their organizations, embed technology into everything they do, and to build enduring capabilities. <br></p> <br>
+          <p class = "time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Hours: <br> Not Available<br><!--days and time open-->
+            <br><br></p>
+            <!-- provides location and once you click it will redirect to google maps in a new tab-->
+            <p class = "location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href = "https://www.google.com/maps/place/McKinsey+%26+Co/@42.3282318,-83.0463892,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2d2528fda74f:0xe99b3187bcadf9fe!8m2!3d42.3282318!4d-83.0463892" target = "_blank">
+              <b>150 W Jefferson Srv Rd STE 1600<br> Detroit, MI 48226</b></a><br> click for directions</a></p><br>
+        </div>
+        <small class = "text-muted"><a href = "https://www.mckinsey.com/#" target = "_blank"><b>click to view official website</b></a></small>
+        <img src = "static\images\" class = "card-img-top" alt = "">
+
+      </div>
+    </div>
+
+    <div class = "column">
+      <div class = "card" id = "14" onmouseenter="expandCard(14)" onmouseleave="revertCard(14)">
+        <div class = "card-body">
+          <h5 class = "card-title" style="font-family: 'Arvo', serif;"><b>Zoom Ride</b><br></h5> <!--card-->
+          <p>Phone Number: (888)-303-4880 </p><br>
+          <p class = "desrcription" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description--> Whether you are just in town for a quick meeting or for the weekend, or even if you need to go on a long trip, Zoom Ride has you covered. They allow you to book rides in 60 minute increments for a flat fee, and allow multiple stops, so you won't ever miss your flight or your meeting. They are very flexible with airport transfers, and even offer free masks with every ride, all at a very competetive price range.
+          </p> <br>
+          <p class = "time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Hours: <br> Monday-Friday: 9:00 am - 5:00 pm<br> Saturday: 9:00 am - 1:00 pm<br> Sunday: Closed<br><!--days and time open-->
+            <br><br></p>
+            <!-- provides location and once you click it will redirect to google maps in a new tab-->
+            <p class = "location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href = "https://www.google.com/maps/place/Zoom+Ride/@42.324828,-83.209115,17z/data=!3m1!4b1!4m5!3m4!1s0x883b35550c02f3e1:0x32e759bf11311ce3!8m2!3d42.3248279!4d-83.209529" target = "_blank">
+              <b>3 Park Ln Blvd Ste. 1200-1201W,<br> Dearborn, MI 48126</b></a> <br>click for directions</a></p><br>
+        </div>
+        <small class = "text-muted"><a href = "https://www.myzoomride.com/html/" target = "_blank"><b>click to view official website</b></a></small>
+        <img src = "static\images\ZoomRide.jpg" class = "card-img-top" alt = "">
+
+      </div>
+    </div>
+
+    <div class = "column">
+      <div class = "card" id = "15" onmouseenter="expandCard(15)" onmouseleave="revertCard(15)">
+        <div class = "card-body">
+          <h5 class = "card-title" style="font-family: 'Arvo', serif;"><b>6 Salon</b><br></h5> <!--card-->
+          <p class = "desrcription" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description--> 6 Salon is an award-winning salon, that is "commited to providing unparalleled service that addresses the changing needs of contemporary clients". They offer haircuts, coloring, make-up, nails, threading, waxing, and more, all at a competetive price. Call now or visit their website to book an appointment.
+          </p> <br>
+          <p class = "time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Monday - Friday: 7:00 am - 8:00 pm<br> Saturday: 9:00 am - 7:00 pm <br> Sunday: Closed <br><!--days and time open-->
+            <br><br></p>
+            <!-- provides location and once you click it will redirect to google maps in a new tab-->
+            <p class = "location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href = "https://www.google.com/maps/place/6+Salon/@42.3345385,-83.0493752,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2d6474015deb:0x53f990df3f1bf4c3!8m2!3d42.3345503!4d-83.0493365" target = "_blank">
+              <b>1441 Woodward Ave, <br> Detroit, MI 48226</b></a> click for directions</a></p><br>
+        </div>
+        <small class = "text-muted"><a href = "https://www.sixsalon.com" target = "_blank"><b>click to view official website</b></a></small>
+        <img src = "static\images\6Salon.jpg" class = "card-img-top" alt = "">
+
+      </div>
+    </div>
+  </div>
+
+  <div class = "rowbreak">
+    <br><br>
+  </div>
+
+   <!--button for getting back to the top of the page-->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Click to go back to the top</button>
 
   </body>
 
