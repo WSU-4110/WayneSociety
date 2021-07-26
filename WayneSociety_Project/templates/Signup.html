@@ -9,6 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/Signup.css')}}">
+  <script src="https://Kit.font-awesome.com/a076d05399.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +76,10 @@
         <!-- <p><input type="checkbox" name="terms"><p style="color: white;"> I accept the </p><u style="font-family: 'Arvo', serif; color: white;"><a href="Terms.html"> Terms and Conditions</a></u></p>
         <br> -->
 
-        <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)"><u style="color: white; font-family: 'Arvo', serif;">  I Agree Terms & Coditions</u>
+
+
+
+        <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)"><u style="color: white; font-family: 'Arvo', serif;">  I've read and accept the Terms & Conditions</u>
         <br><br>
         
         <button class="button is-block is-info is-large is-fullwidth" id="submit">Create Account</button>
@@ -89,6 +93,10 @@
 
   <script src="{{url_for('static', filename='js/Signup.js')}}"></script>
 </body>
+
+
+
+
 
 </html>
 
