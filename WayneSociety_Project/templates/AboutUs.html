@@ -19,6 +19,8 @@
     <title>About US</title>
 </head>
 <body>
+
+	<div class="space"></div>
     <h1 class="title" style="font-family: 'Arvo', serif;">
         Meet Our Developers
     </h1>
@@ -103,14 +105,18 @@
 	
 	<div class="space"></div>
 
+	
 	<br>
 	<br>
 	<br>
     <hr style="width: 200ext; align: left; margin-left: 0;">
-	<br>
 	
-	<div class="para">
-		<h3 style="font-family: 'Arvo', serif; font-weight: 900; color: #38A0D0;"> Quick Links</h3> 
+	<div class="para" style="margin-bottom: -65px;"">
+		<br>
+		<br>
+		<br>
+		
+		<h3 style="font-family: 'Arvo', serif; font-weight: 900; color: #38A0D0; "> Quick Links</h3> <br>
 	<b>	<a href="{{ url_for('Jobs') }}" style="font-family: 'Arvo', serif;">Jobs</a> <br>
 		<a href="{{ url_for('Attractions') }}" style="font-family: 'Arvo', serif;">Attractions</a> <br>
 		<a href="{{ url_for('Services') }}" style="font-family: 'Arvo', serif;">Services</a> <br>
@@ -148,14 +154,14 @@
 <col span="3">
 
 <tr><th  colspan="6" class="footer-font"><div style="padding-right: 40px;" id="contact-form" class="contact-form">
-	<h1 class="contact-form_title">Contact us&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+	<h1 class="contact-form_title" style="margin-top: 10px;">Contact us&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
 		
 	</h1>
 	<div class="separator"></div>
 
 	
 
-	<form class="form" >
+	<form class="form" style="margin-bottom: 10px;">
 		
 		<input required name="email" v-model="contact.email" placeholder="E-mail" type="email" autocomplete="off">
 		<textarea name="message" v-model="contact.message" rows="4" placeholder="Message"></textarea>
@@ -175,12 +181,6 @@
 <!-- <footer>
 	<code style="text-align: left;"> logo/comapny name</code>
   </footer> -->
-
-
-
-
-	
-
 </body>
 </html>
 {% endblock %}

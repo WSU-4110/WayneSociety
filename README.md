@@ -3,6 +3,8 @@
 ## WayneSociety
 Project: https://github.com/WSU-4110/WayneSociety/wiki
 
+Live Website Demo: https://waynesocietyweb.herokuapp.com/
+
 Contributors to the project:
 ---
 ```
