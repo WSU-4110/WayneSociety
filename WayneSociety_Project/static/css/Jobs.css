@@ -8,7 +8,6 @@
   font-family: "Slabo 27px", serif;
   color: #333a45;
 }
-
 .wrapper {
   margin: 5em auto;
   max-width: 1000px;
@@ -182,13 +181,19 @@
   }
 }
 
- .pos{  
+
+
+
+
+
+
+.pos{  
   max-width: fit-content;
 }
 
 .footer-font{
   font-size: xx-large;
-  color: #1abc9c;
+  color: white;
 }
 
 .pos2{
@@ -211,7 +216,7 @@ justify-content: center;
   
 } */
 .contact-form {
-	font-family: 16px;
+	font-family: 14px;
 	margin: 0 auto;
 	max-width: 600px;
 	width: 100%;
@@ -277,5 +282,5 @@ justify-content: center;
   padding-left: 630px;
   padding-bottom: 60px;
   font-size: 18px;
-  color: skyblue;
+  color: white;
 }

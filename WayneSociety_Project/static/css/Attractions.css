@@ -67,13 +67,18 @@ instead of next to each other */
 }
 
 
+
+
+
+
+
 .pos{  
   max-width: fit-content;
 }
 
 .footer-font{
   font-size: xx-large;
-  color: #1abc9c;
+  color: white;
 }
 
 .pos2{
@@ -86,6 +91,15 @@ justify-content: center;
   opacity: 50%;
 } 
 
+
+/* code {
+  background: #2db34a;
+  border-radius: 8px;
+  display: block;
+  padding-block-end: 150px;
+  
+  
+} */
 .contact-form {
 	font-family: 16px;
 	margin: 0 auto;
@@ -153,5 +167,5 @@ justify-content: center;
   padding-left: 630px;
   padding-bottom: 60px;
   font-size: 18px;
-  color: skyblue;
+  color: white;
 }

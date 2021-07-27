@@ -100,13 +100,17 @@
 }
 
 
+
+
+
+
 .pos{  
 	max-width: fit-content;
   }
   
   .footer-font{
 	font-size: xx-large;
-	color: #1abc9c;
+	color: white;
   }
   
   .pos2{
@@ -195,5 +199,9 @@
 	padding-left: 630px;
 	padding-bottom: 60px;
 	font-size: 18px;
-	color: skyblue;
+	color: white;
   }
+
+
+
+  .space { margin-top: 400px; }
