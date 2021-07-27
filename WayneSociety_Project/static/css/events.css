@@ -13,7 +13,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0;
+  padding: 60px;
 }
 ul .booking-card {
   position: relative;
@@ -193,6 +193,14 @@ h1 {
   margin: 10px 20px;
 }
 
+/* <<<<<<< HEAD
+.header__title {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.1;
+======= */
 .pos{  
   max-width: fit-content;
 }
