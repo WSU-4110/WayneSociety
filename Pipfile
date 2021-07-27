@@ -9,6 +9,7 @@ flask-sqlalchemy = "*"
 flask-login = "*"
 shell = "*"
 selenium = "*"
+pylint = "*"
 
 [dev-packages]
 

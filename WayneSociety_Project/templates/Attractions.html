@@ -6,28 +6,42 @@
 <script src="static\js\Attractions.js"></script><!--js extension-->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/Attractions.css')}}"><!--links to css files-->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Attractions</title> 
+    <title style="font-family: 'Arvo', serif;">Attractions</title> 
    <body>
-    <h1 class="title"> Attractions </h1>
+    <h1 class="title" style="font-family: 'Arvo', serif;"> Attractions </h1>
+    <p style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Welcome to the attractions page of Wayne Society. <br>This page is aimed towards individuals who are tourists and natives that are looking
+      to see some attractions in Wayne county. <br>Some attractions include museums, buildings, and art. We hope you enjoy what you see and find 
+      a attraction that you would like to visit.
+    </p><br>
+    <br>
+    <br>
+    
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><b>DIA</b><br></h5> <!--card-->
+            
             <img src="static\images\DIA.jpg" class="card-img-top"  alt="DIA picture">
-            <p class="description"><!--description-->The Detroit Institute of Arts, located in Midtown Detroit, Michigan, has one of the largest and most 
+            <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Detriot Institute of Arts</b><br></h5> <!--card-->
+            <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Detroit Institute of Arts, located in Midtown Detroit, Michigan, has one of the largest and most 
               significant art collections in the United States. With over 100 galleries, it covers 658,000 square feet with a major renovation 
-              and expansion project completed in 2007 that added 58,000 square feet. The DIA collection is regarded as among the top six museums 
+              and expansion project completed in 2007 that added 58,000 square feet. <br><br>The DIA collection is regarded as among the top six museums 
               in the United States with an encyclopedic collection which spans the globe from ancient Egyptian and European works to contemporary 
-              art. Its art collection is valued in billions of dollars, up to $8.1 billion according to a 2014 appraisal. The DIA campus is located 
+              art. Its art collection is valued in billions of dollars, up to $8.1 billion according to a 2014 appraisal. <br><br>The DIA campus is located 
               in Detroit's Cultural Center Historic District, about two miles north of the downtown area, across from the Detroit Public Library 
-              near Wayne State University. The museum building is highly regarded by architects. The original building, designed by Paul Philippe Cret, 
+              near Wayne State University. <br><br>The museum building is highly regarded by architects. The original building, designed by Paul Philippe Cret, 
               is flanked by north and south wings with the white marble as the main exterior material for the entire structure. The campus is part of 
               the city's Cultural Center Historic District listed in the National Register of Historic Places.<a href="https://en.wikipedia.org/wiki/Detroit_Institute_of_Arts" target="_blank"><b><button>wikipedia</button></b></a></p>
               <br>
-            <p class="time">Monday  Closed<br><!--days and time open-->
+            <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Monday  Closed<br><!--days and time open-->
                 Tuesday Closed<br>
                 Wednesday 9:00 AM – 4:00 PM<br>
                 Thursday  9:00 AM – 4:00 PM<br>
@@ -45,22 +59,23 @@
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><b>Basilica of Ste. Anne de Detroit</b><br></h5> <!--card-->
+            
             <img src="static\images\anne2.jpg" class="card-img-top" alt="st-anne picture" height="700" width="700">
-              <p class="description"><!--description-->Basilica of Sainte Anne de Détroit was founded July 26, 1701 by French 
+            <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Basilica of Ste. Anne de Detroit</b><br></h5> <!--card-->
+              <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->Basilica of Sainte Anne de Détroit was founded July 26, 1701 by French 
                 colonists in New France, and is the second-oldest continuously operating Roman Catholic parish in the United States.
-                The current Gothic Revival cathedral-styled church, built in 1886, is located at 1000 Ste. Anne Street in Detroit, 
-                Michigan, in the Richard-Hubbard neighborhood, near the Ambassador Bridge, and the Michigan Central Station. At one 
+                The current Gothic Revival cathedral-styled church, built in 1886, is located at 1000 Ste. <br><br>Anne Street in Detroit, 
+                Michigan, in the Richard-Hubbard neighborhood, near the Ambassador Bridge, and the Michigan Central Station. <br><br>At one 
                 time it was the seat of a diocese that included French territory in Ontario, Canada south of the Detroit River. 
-                Historically, the parish congregation has occupied eight different buildings. It was listed on the National Register 
-                of Historic Places in 1976. The main entry to the Church faces a grand tree-lined, brick paved plaza. Reflecting 
+                Historically, the parish congregation has occupied eight different buildings. <br><br>It was listed on the National Register 
+                of Historic Places in 1976. <br><br>The main entry to the Church faces a grand tree-lined, brick paved plaza. <br><br>Reflecting 
                 demographic changes in the city and region since the 1930s, the present parish is largely Latino in population. 
-                On March 1, 2020, Pope Francis elevated the church to a minor basilica, the 86th such designation in the United States 
+                <br><br>On March 1, 2020, Pope Francis elevated the church to a minor basilica, the 86th such designation in the United States 
                 and the third in Michigan.<a href="https://en.wikipedia.org/wiki/Basilica_of_Sainte_Anne_de_D%C3%A9troit" target="_blank"> <b><button>wikipedia</button></b></a></p>
                 <br>
               </p>
               <!--provides location and once you click it will redirect to google maps in a new tab-->
-              <p class="location"><a href="https://www.google.com/maps/place/Basilica+of+Ste.+Anne+de+Detroit/@42.3205373,-83.0765543,15z/data=!4m5!3m4!1s0x0:0xfeee8b783c9316fa!8m2!3d42.3205635!4d-83.0764743?hl=en-US" target="_blank">
+              <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Basilica+of+Ste.+Anne+de+Detroit/@42.3205373,-83.0765543,15z/data=!4m5!3m4!1s0x0:0xfeee8b783c9316fa!8m2!3d42.3205635!4d-83.0764743?hl=en-US" target="_blank">
               <b><button>1000 St Anne St, Detroit, MI 48216</button></b></a></p><br>
           </div>
             <small class="text-muted"><a href="https://ste-anne.org/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
@@ -70,21 +85,22 @@
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><b>Fox Theatre</b><br></h5> <!--card-->
+            
             <img src="static\images\fox-theatre.jpg" class="card-img-top"  alt="fox-teatre picture">
-            <p class="description"><!--description-->The Fox Theatre is a performing arts center located at 2211 Woodward Avenue in Downtown
+            <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Fox Theatre</b><br></h5> <!--card-->
+            <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Fox Theatre is a performing arts center located at 2211 Woodward Avenue in Downtown
               Detroit, Michigan, near the Grand Circus Park Historic District. Opened in 1928 as a flagship movie palace in the Fox Theatres
-              chain, it was at over 5,000 seats the largest theater in the city. Designed by theater architect C. Howard Crane, it was 
+              chain, it was at over 5,000 seats the largest theater in the city. <br><br>Designed by theater architect C. Howard Crane, it was 
               listed on the National Register of Historic Places in 1985 and was designated a National Historic Landmark in 1989 for its 
-              architecture. The area surrounding the Fox is nicknamed Foxtown. The city's major performance centers and theatres emanate 
+              architecture. The area surrounding the Fox is nicknamed Foxtown. <br><br>The city's major performance centers and theatres emanate 
               from the Fox Theatre and Grand Circus Park Historic District and continue along Woodward Avenue toward the Fisher Theatre in 
-              the city's New Center. The Fox has 5,048 seats. It is the largest surviving movie palace of the 1920s and the largest of the 
+              the city's New Center. The Fox has 5,048 seats. <br><br>It is the largest surviving movie palace of the 1920s and the largest of the 
               original Fox Theatres. The Fox was fully restored in 1988. The adjacent office building houses the headquarters of Olympia 
               Entertainment and Little Caesars.<a href="https://en.wikipedia.org/wiki/Fox_Theatre_(Detroit)" target="_blank"> <b><button>wikipedia</button></b></a></p><br>
             <p class="time">Temporarily closed<br><br><!--days and time open-->
             </p>
             <!--provides location and once you click it will redirect to google maps in a new tab-->
-            <p class="location"><a href="https://www.google.com/maps/place/Fox+Theatre/@42.338519,-83.052403,15z/data=!4m5!3m4!1s0x0:0xf25483a0b6175a31!8m2!3d42.338519!4d-83.052403" target="_blank">
+            <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Fox+Theatre/@42.338519,-83.052403,15z/data=!4m5!3m4!1s0x0:0xf25483a0b6175a31!8m2!3d42.338519!4d-83.052403" target="_blank">
             <b><button>2211 Woodward Ave, Detroit, MI 48201</button></b></a></p><br>
           </div>
                 <small class="text-muted"><a href="https://www.313presents.com/fox-theatre" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
@@ -94,18 +110,19 @@
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><b>Monument to Joe Louis</b><br></h5> <!--card-->
+            
             <img src="static\images\joe.jpg"  class="card-img-top"  alt="jlouis picture">
-              <p class="description"><!--description-->The Monument to Joe Louis, known also as The Fist, is a memorial located at 
+            <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Monument to Joe Louis</b><br></h5> <!--card-->
+              <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Monument to Joe Louis, known also as The Fist, is a memorial located at 
                 Detroit's Hart Plaza, dedicated to boxer Joe Louis. In his first fight with Detroiter Joe Louis, Schmeling won, 
-                leading to reams of propaganda about the superiority of the Aryan race. Although Schmeling himself was not a member 
+                leading to reams of propaganda about the superiority of the Aryan race. <br><br>Although Schmeling himself was not a member 
                 of the Nazi party, the German government took many steps to ensure his compliance, like not allowing his family to 
                 travel with him.
                 <a href="https://en.wikipedia.org/wiki/Monument_to_Joe_Louis" target="_blank"> <b><button>wikipedia</button></b></a></p>
                 <br>
-              <p class="time">Available to see whenever you want<br><br><!--days and time open-->
+              <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Available to see whenever you want<br><br><!--days and time open-->
                 <!--provides location and once you click it will redirect to google maps in a new tab-->
-              <p class="location"><a href="https://www.google.com/maps/place/Monument+to+Joe+Louis/@42.3286592,-83.0445358,15z/data=!4m5!3m4!1s0x0:0xca8fc98b03b4bba0!8m2!3d42.3286592!4d-83.0445358" target="_blank">
+              <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Monument+to+Joe+Louis/@42.3286592,-83.0445358,15z/data=!4m5!3m4!1s0x0:0xca8fc98b03b4bba0!8m2!3d42.3286592!4d-83.0445358" target="_blank">
               <b><button>5 Woodward Ave, Detroit, MI 48226</button></b></a></p><br>
           </div>
         </div>
@@ -114,15 +131,16 @@
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><b>The Spirit of Detroit</b><br></h5> <!--card-->
+            
             <img src="static\images\spirit.jpg" class="card-img-top"  alt="spirit picture">
-              <p class="description"><!--description-->The Spirit of Detroit is a monument with a large bronze statue created by Marshall 
+            <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>The Spirit of Detroit</b><br></h5> <!--card-->
+              <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Spirit of Detroit is a monument with a large bronze statue created by Marshall 
                 Fredericks and located at the Coleman A. Young Municipal Center on Woodward Avenue in Detroit, Michigan.
                 <a href="https://en.wikipedia.org/wiki/The_Spirit_of_Detroit" target="_blank"> <b><button>wikipedia</button></b></a></p>
                 <br>
-              <p class="time">Available to see whenever you want<br><br><!--days and time open-->
+              <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Available to see whenever you want<br><br><!--days and time open-->
               <!--provides location and once you click it will redirect to google maps in a new tab-->
-              <p class="location"><a href="https://www.google.com/maps/place/The+Spirit+of+Detroit/@42.3293011,-83.0467621,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2d25737c7ed3:0x2eef71a337b9e9c1!8m2!3d42.3293011!4d-83.0445734" target="_blank">
+              <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/The+Spirit+of+Detroit/@42.3293011,-83.0467621,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2d25737c7ed3:0x2eef71a337b9e9c1!8m2!3d42.3293011!4d-83.0445734" target="_blank">
               <b><button>2 Woodward Ave, Detroit, MI 48226</button></b></a></p><br>
           </div>
         </div>
@@ -131,18 +149,19 @@
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><b>Islamic Center of America</b><br></h5> <!--card-->
+            
             <img src="static\images\mosque.jpg" class="card-img-top" alt="mosque picture">
-              <p class="description"><!--description-->The Islamic Center of America is a mosque located in Dearborn, Michigan. 
+            <h5 class="card-title"><b>Islamic Center of America</b><br></h5> <!--card-->
+              <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Islamic Center of America is a mosque located in Dearborn, Michigan. 
                 Although the institution dates back to 1963, the center's current mosque opened in 2005. It is the largest mosque 
                 in North America and the oldest Shia mosque in the United States. With its large Shia Arab population, Dearborn is 
-                often called the "heart of Shiism" in the United States. The Islamic Center of America is located at 19500 Ford Road 
+                often called the "heart of Shiism" in the United States. <br><br>The Islamic Center of America is located at 19500 Ford Road 
                 in Dearborn. The institution was founded in 1962 by Muhammad Jawad Chirri, who remained its director until his death 
                 in 1994.<a href="https://en.wikipedia.org/wiki/Islamic_Center_of_America" target="_blank"> <b><button>wikipedia</button></b></a></p>
                 <br>
               </p>
               <!--provides location and once you click it will redirect to google maps in a new tab-->
-              <p class="location"><a href="https://www.google.com/maps/place/Islamic+Center+of+America/@42.3303719,-83.2298152,15z/data=!4m5!3m4!1s0x0:0x517dbb87b98d5718!8m2!3d42.3303719!4d-83.2298152?hl=en-US" target="_blank">
+              <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Islamic+Center+of+America/@42.3303719,-83.2298152,15z/data=!4m5!3m4!1s0x0:0x517dbb87b98d5718!8m2!3d42.3303719!4d-83.2298152?hl=en-US" target="_blank">
                 <b><button>19500 Ford Rd, Dearborn, MI 48128</button></b></a></p><br>
             </div>
               <small class="text-muted"><a href="http://www.icofa.com/" target="_blank"><b><button>click to view official website</button></a><br><br></small><!--makes the text smaller also website link-->
@@ -152,13 +171,14 @@
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><b>Campus Martius Park</b><br></h5> <!--card-->
+            
             <img src="static\images\Campus.jpg" class="card-img-top"  alt="maritius picture">
-            <p class="description"><!--description-->Campus Martius Park is a re-established park in Downtown Detroit, Michigan. After the fire of 1805, Campus Martius 
+            <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Campus Martius Park</b><br></h5> <!--card-->
+            <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->Campus Martius Park is a re-established park in Downtown Detroit, Michigan. After the fire of 1805, Campus Martius 
               was the focal point of Judge Augustus Woodward's plans to rebuild the city. It was named for the principal square in Marietta, Ohio, the first capital of 
               the Northwest Territories.<a href="https://en.wikipedia.org/wiki/Campus_Martius_Park" target="_blank"><b><button>wikipedia</button></b></a></p>
               <br>
-            <p class="time">Monday  	6:00 AM – 10:00 PM<br><!--days and time open-->
+            <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">Monday  	6:00 AM – 10:00 PM<br><!--days and time open-->
                 Tuesday 	6:00 AM – 10:00 PM<br>
                 Wednesday 	6:00 AM – 10:00 PM<br>
                 Thursday  	6:00 AM – 10:00 PM<br>
@@ -166,7 +186,7 @@
                 Saturday  	6:00 AM – 10:00 PM<br>
                 Sunday  	6:00 AM – 10:00 PM<br><br></p>
             <!--provides location and once you click it will redirect to google maps in a new tab-->
-            <p class="location"><a href="https://www.google.com/maps/place/Campus+Martius+Park/@42.3318175,-83.0487452,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2d2feadef68f:0x8cd5229188826206!8m2!3d42.3318175!4d-83.0465565" target="_blank">
+            <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Campus+Martius+Park/@42.3318175,-83.0487452,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2d2feadef68f:0x8cd5229188826206!8m2!3d42.3318175!4d-83.0465565" target="_blank">
               <b><button>800 Woodward Ave, Detroit, MI 48226</button></b></a></p><br>
             </div>
             <small class="text-muted"><a href="http://www.campusmartiuspark.org/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
@@ -176,17 +196,18 @@
           <div class="card-deck">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title"><b>Guardian Building</b><br></h5> <!--card-->
-                <img src="static\images\Guardian.jpg" class="card-img-top"  alt="Guardian picture" height="500">
-                <p class="description"><!--description-->The Guardian Building is a landmark skyscraper in the United States, located at 500 Griswold Street in 
+                
+                <img src="static\images\Guardian.jpg" class="card-img-top"  alt="Guardian picture" >
+                <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Guardian Building</b><br></h5> <!--card-->
+                <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Guardian Building is a landmark skyscraper in the United States, located at 500 Griswold Street in 
                   Downtown Detroit, Michigan, within the Financial District. The Guardian is a class-A office building owned by Wayne County, Michigan and serves 
-                  as its headquarters. Built in 1928 and finished in 1929, the building was originally called the Union Trust Building and is a bold example of Art 
-                  Deco architecture, including art moderne designs. At the top of the Guardian Building's spire is a large U.S. flag, complementing the four smaller 
+                  as its headquarters. <br><br>Built in 1928 and finished in 1929, the building was originally called the Union Trust Building and is a bold example of Art 
+                  Deco architecture, including art moderne designs. <br><br>At the top of the Guardian Building's spire is a large U.S. flag, complementing the four smaller 
                   flags atop nearby 150 West Jefferson. The building has undergone recent award-winning renovations. It was designated a National Historic Landmark 
                   on June 29, 1989, and the associated Detroit Financial District is on the National Register of Historic Places. The Guardian building includes retail 
                   and a tourist gift shop.<a href="https://en.wikipedia.org/wiki/Guardian_Building" target="_blank"><b><button>wikipedia</button></b></a></p>
                   <br>
-                <p class="time"><!--days and time open-->
+                <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--days and time open-->
                     Monday	Open 24 hours<br>
                     Tuesday	Open 24 hours<br>
                     Wednesday	Open 24 hours<br>
@@ -195,7 +216,7 @@
                     Saturday	Open 24 hours<br>
                     Sunday	Open 24 hours<br></p>
                 <!--provides location and once you click it will redirect to google maps in a new tab-->
-                <p class="location"><a href="https://www.google.com/maps/place/Guardian+Building/@42.3296291,-83.0483149,17z/data=!3m2!4b1!5s0x883b2d2fa4fb6487:0x578697918b9a46f1!4m5!3m4!1s0x883b2d25442750b3:0x42b1654e937291d5!8m2!3d42.3296291!4d-83.0461262" target="_blank">
+                <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Guardian+Building/@42.3296291,-83.0483149,17z/data=!3m2!4b1!5s0x883b2d2fa4fb6487:0x578697918b9a46f1!4m5!3m4!1s0x883b2d25442750b3:0x42b1654e937291d5!8m2!3d42.3296291!4d-83.0461262" target="_blank">
                   <b><button>500 Griswold St STE 1600, Detroit, MI 48226</button></b></a></p><br>
                 </div>
                 <small class="text-muted"><a href="https://www.guardianbuilding.com/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
@@ -205,20 +226,21 @@
            <div class="card-deck">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title"><b>Detroit Riverfront</b><br></h5> <!--card-->
+                    
                     <img src="static\images\riverwalk.jpg" class="card-img-top"  alt="front picture">
-                    <p class="description"><!--description-->The Detroit International Riverfront is a tourist attraction and landmark of 
+                    <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Detroit Riverfront</b><br></h5> <!--card-->
+                    <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Detroit International Riverfront is a tourist attraction and landmark of 
                       Detroit, Michigan extending from the Ambassador Bridge in the west to Belle Isle in the east, for a total of 5.5 miles. 
                       The International Riverfront encompasses a cruise ship passenger terminal and dock, a marina, a multitude of parks, 
-                      restaurants, retail shops, skyscrapers, and high rise residential areas along with TCF Center. The Marriott at the 
-                      Renaissance Center and the Robert's Riverwalk Hotel are also situated along the International Riverfront. Private 
+                      restaurants, retail shops, skyscrapers, and high rise residential areas along with TCF Center. <br><br>The Marriott at the 
+                      Renaissance Center and the Robert's Riverwalk Hotel are also situated along the International Riverfront. <br><br>Private 
                       companies and foundations together with the city, state, and federal government have contributed several hundred million 
-                      dollars toward the riverfront development. Key public spaces in the International Riverfront, such as the RiverWalk, 
+                      dollars toward the riverfront development. <br><br>Key public spaces in the International Riverfront, such as the RiverWalk, 
                       Dequindre Cut Greenway and Trail, William G. Milliken State Park and Harbor, and a cruise ship passenger terminal and 
                       dock at Hart Plaza complement the architecture of the area.<a href="https://en.wikipedia.org/wiki/Detroit_International_Riverfront" target="_blank"><b><button>wikipedia</button></b></a></p>
                       <br>
                     <!--provides location and once you click it will redirect to google maps in a new tab-->
-                    <p class="location"><a href="https://www.google.com/maps/place/Detroit+Institute+of+Arts/@42.3593793,-83.0666897,17z/data=!3m2!4b1!5s0x8824d2bdb8dfcbf7:0x736b10ed45cf41c0!4m5!3m4!1s0x8824d2bdb912a53b:0x6d1f41a6007513b2!8m2!3d42.3593793!4d-83.064501" target="_blank">
+                    <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Detroit+Institute+of+Arts/@42.3593793,-83.0666897,17z/data=!3m2!4b1!5s0x8824d2bdb8dfcbf7:0x736b10ed45cf41c0!4m5!3m4!1s0x8824d2bdb912a53b:0x6d1f41a6007513b2!8m2!3d42.3593793!4d-83.064501" target="_blank">
                       <b><button>588 Jefferson Ct, Detroit, MI 48207</button></b></a></p><br>
                     </div>
                     </div>
@@ -227,23 +249,24 @@
               <div class="card-deck">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title"><b>Belle Isle</b><br></h5> <!--card-->
+                    
                     <img src="static\images\belle.jpg" class="card-img-top"  alt="belle isle picture">
-                    <p class="description"><!--description-->Belle Isle Park, known simply as Belle Isle, is a 982-acre island park in 
+                    <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Belle Isle</b><br></h5> <!--card-->
+                    <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->Belle Isle Park, known simply as Belle Isle, is a 982-acre island park in 
                       Detroit, Michigan, developed in the late 19th century. It consists of Belle Isle, an island in the Detroit River, 
                       as well as several surrounding islets. The U.S.-Canada border is in the channel south of Belle Isle such that the 
                       island is not in Canada. Owned by the city of Detroit, Belle Isle is managed as a state park by the Michigan 
-                      Department of Natural Resources through a 30-year lease initiated in 2013; it was previously a city park. Belle Isle 
+                      Department of Natural Resources through a 30-year lease initiated in 2013; it was previously a city park. <br><br>Belle Isle 
                       Park is the largest city-owned island park in the United States, and Belle Isle is the third largest island in the 
-                      Detroit River, after Grosse Ile and Fighting Island. It is connected to mainland Detroit by the MacArthur Bridge.
+                      Detroit River, after Grosse Ile and Fighting Island. <br><br>It is connected to mainland Detroit by the MacArthur Bridge.
                        Belle Isle Park is home to the Belle Isle Aquarium, the Belle Isle Conservatory, the Belle Isle Nature Center, the 
                        James Scott Memorial Fountain, the Dossin Great Lakes Museum, a municipal golf course, a half-mile swimming beach, 
-                       and numerous other monuments and attractions. It is also the site of a Coast Guard station. The Detroit Yacht Club 
+                       and numerous other monuments and attractions. <br><br>It is also the site of a Coast Guard station. The Detroit Yacht Club 
                        is located on an adjacent island, connected to Belle Isle by a bridge.<a href="https://en.wikipedia.org/wiki/Belle_Isle_Park_(Michigan)" target="_blank"><b><button>wikipedia</button></b></a></p>
                       <br>
-                    <p class="time">5AM to 10PM year-round<br><!--days and time open-->
+                    <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;">5AM to 10PM year-round<br><!--days and time open-->
                     <!--provides location and once you click it will redirect to google maps in a new tab-->
-                    <p class="location"><a href="https://www.google.com/maps/place/Belle+Isle/@42.3417234,-83.0341098,12.96z/data=!4m5!3m4!1s0x8824d4b2383fbbd3:0x3da444fedb5e0199!8m2!3d42.3432541!4d-82.9743495" target="_blank">
+                    <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Belle+Isle/@42.3417234,-83.0341098,12.96z/data=!4m5!3m4!1s0x8824d4b2383fbbd3:0x3da444fedb5e0199!8m2!3d42.3432541!4d-82.9743495" target="_blank">
                       <b><button>Belle Isle, Detroit, MI</button></b></a></p><br>
                     </div>
                     <small class="text-muted"><a href="https://www.belleisleconservancy.org/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
@@ -253,13 +276,14 @@
               <div class="card-deck">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title"><b>Detroit Historical Museum</b><br></h5> <!--card-->
+                    
                     <img src="static\images\history.jpg" class="card-img-top"  alt="museum picture">
-                    <p class="description"><!--description-->The Detroit Historical Museum is located at 5401 Woodward Avenue in the city's 
+                    <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Detroit Historical Museum</b><br></h5> <!--card-->
+                    <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Detroit Historical Museum is located at 5401 Woodward Avenue in the city's 
                       Cultural Center Historic District in Midtown Detroit. It chronicles the history of the Detroit area from cobblestone 
                       streets, 19th century stores, the auto assembly line, toy trains, fur trading from the 18th century, and much more.<a href="https://en.wikipedia.org/wiki/Detroit_Historical_Museum" target="_blank"><b><button>wikipedia</button></b></a></p>
                       <br>
-                    <p class="time"><!--days and time open-->
+                    <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--days and time open-->
                       Wednesday	Closed <br>
                       Thursday	10:00 AM – 5:00 PM<br>
                       Friday	10:00 AM – 5:00 PM<br>
@@ -267,7 +291,7 @@
                       Sunday	1:00 PM – 5:00 PM<br><br>
                       Monday	Closed</p>
                     <!--provides location and once you click it will redirect to google maps in a new tab-->
-                    <p class="location"><a href="https://www.google.com/maps/place/Detroit+Historical+Museum/@42.3597909,-83.0693281,17z/data=!3m1!4b1!4m5!3m4!1s0x8824d2bd3be8e42b:0x18d12e9e39261789!8m2!3d42.3597909!4d-83.0671394" target="_blank">
+                    <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Detroit+Historical+Museum/@42.3597909,-83.0693281,17z/data=!3m1!4b1!4m5!3m4!1s0x8824d2bd3be8e42b:0x18d12e9e39261789!8m2!3d42.3597909!4d-83.0671394" target="_blank">
                       <b><button>5401 Woodward Ave, Detroit, MI 48202</button></b></a></p><br>
                     </div>
                     <small class="text-muted"><a href="http://detroithistorical.org/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
@@ -277,22 +301,192 @@
               <div class="card-deck">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title"><b>Michigan Science Center</b><br></h5> <!--card-->
+                    
                     <img src="static\images\sciencecenter.jpg" class="card-img-top"  alt="science center picture">
-                    <p class="description"><!--description-->The New Detroit Science Center features scientific exploration. Its scientific 
+                    <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Michigan Science Center</b><br></h5> <!--card-->
+                    <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The New Detroit Science Center features scientific exploration. Its scientific 
                       exploration includes dome theatre, planetarium, learning resource center, energy sparks theater, science stage, science 
                       hall for traveling exhibits, live science demonstrations in exhibit laboratories, children’s gallery for pint-size 
-                      scientists, special events lobby, family programs, and field trips. The company was founded in 1970 and is based in 
+                      scientists, special events lobby, family programs, and field trips. <br><br>The company was founded in 1970 and is based in 
                       Detroit, Michigan.<a href="https://en.wikipedia.org/wiki/Michigan_Science_Center" target="_blank"><b><button>wikipedia</button></b></a></p>
                       <br>
                     <!--provides location and once you click it will redirect to google maps in a new tab-->
-                    <p class="location"><a href="https://www.google.com/maps/place/Michigan+Science+Center/@42.358451,-83.0645853,17z/data=!3m2!4b1!5s0x8824d2be89c6ed47:0x931e8d85e0c3e77d!4m5!3m4!1s0x8824d2be63c14d55:0x68dd1993567d083!8m2!3d42.358451!4d-83.0623966" target="_blank">
+                    <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Michigan+Science+Center/@42.358451,-83.0645853,17z/data=!3m2!4b1!5s0x8824d2be89c6ed47:0x931e8d85e0c3e77d!4m5!3m4!1s0x8824d2be63c14d55:0x68dd1993567d083!8m2!3d42.358451!4d-83.0623966" target="_blank">
                       <b><button>5020 John R St, Detroit, MI 48202</button></b></a></p><br>
                     </div>
                     <small class="text-muted"><a href="http://www.mi-sci.org/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
                     </div>
                   </div>
+                  
+              <div class="card-deck">
+                <div class="card">
+                  <div class="card-body">
                     
-</body>
+                    <img src="static\images\henryford.jpg" class="card-img-top"  alt="Henry ford picture">
+                    <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Henry Ford Museum of American Innovation</b><br></h5> <!--card-->
+                    <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Henry Ford is a large indoor and outdoor history museum complex and a National Historic Landmark 
+                      in the Detroit suburb of Dearborn, Michigan, United States. The museum collection contains the presidential limousine of John F. Kennedy, 
+                      Abraham Lincoln's chair from Ford's Theatre, Thomas Edison's laboratory, the Wright Brothers' bicycle shop, the Rosa Parks bus, and many 
+                      other historical exhibits. <br><br>It is the largest indoor–outdoor museum complex in the United States and is visited by over 1.7 million people 
+                      each year. <br><br>It was listed on the National Register of Historic Places in 1969 as Greenfield Village and Henry Ford Museum and designated a 
+                      National Historic Landmark in 1981 as "Edison Institute".<a href="https://en.wikipedia.org/wiki/The_Henry_Ford" target="_blank"><b><button>wikipedia</button></b></a></p>
+                      <br>
+                    <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--days and time open-->
+                      Thursday	9:30 AM – 5:00 PM<br>
+                      Friday	9:30 AM – 5:00 PM<br>
+                      Saturday	9:30 AM – 5:00 PM<br>
+                      Sunday	9:30 AM – 5:00 PM<br>
+                      Monday	9:30 AM – 5:00 PM<br>
+                      Tuesday	9:30 AM – 5:00 PM<br>
+                      Wednesday	9:30 AM – 5:00 PM<br><br></p>
+                    <!--provides location and once you click it will redirect to google maps in a new tab-->
+                    <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Henry+Ford+Museum+of+American+Innovation/@42.3053098,-83.2595832,13z/data=!4m9!1m2!2m1!1shenry+ford+museum!3m5!1s0x883b3599c2c9ab2b:0x4ecb16714f669881!8m2!3d42.3034513!4d-83.2342059!15sChFoZW5yeSBmb3JkIG11c2V1bVoTIhFoZW5yeSBmb3JkIG11c2V1bZIBBm11c2V1bQ" target="_blank">
+                      <b><button>20900 Oakwood Blvd, Dearborn, MI 48124</button></b></a></p><br>
+                    </div>
+                    <small class="text-muted"><a href="https://www.thehenryford.org/visit/henry-ford-museum/?utm_source=google&utm_medium=organic&utm_campaign=gmb" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
+                    </div>
+                  </div>
+
+              <div class="card-deck">
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <img src="static\images\fisher.jpg" class="card-img-top"  alt="fisher building picture">
+                    <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Fisher Building</b><br></h5> <!--card-->
+                    <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Fisher Building is a landmark skyscraper located at 3011 West Grand Boulevard in the heart of the 
+                      New Center area of Detroit, Michigan. The ornate 30-story building, completed in 1928, is one of the major works of architect Albert Kahn, and 
+                      is designed in an Art Deco style, faced with limestone, granite, and several types of marble. The Fisher family financed the building with 
+                      proceeds from the sale of Fisher Body to General Motors. <br><br>It was designed to house office and retail space. The building, which contains the 
+                      elaborate 2,089-seat Fisher Theatre, was designated a National Historic Landmark on June 29, 1989. <br><br>It also houses the headquarters for the 
+                      Detroit Public Schools and the studios of radio stations WJR, WDVD, and WDRQ.<a href="https://en.wikipedia.org/wiki/Fisher_Building" target="_blank"><b><button>wikipedia</button></b></a></p>
+                      <br>
+                    <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--days and time open-->
+                      Thursday	Open 24 hours<br>
+                      Friday	Open 24 hours<br>
+                      Saturday	Open 24 hours<br>
+                      Sunday	Open 24 hours<br>
+                      Monday	Open 24 hours<br>
+                      Tuesday	Open 24 hours<br>
+                      Wednesday	Open 24 hours<br><br></p>
+                    <!--provides location and once you click it will redirect to google maps in a new tab-->
+                    <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Fisher+Building/@42.3698441,-83.0858049,15z/data=!3m1!4b1!4m5!3m4!1s0x8824d29d05f9c9f9:0x4ef0610c9ebfd4ba!8m2!3d42.3698438!4d-83.0770738" target="_blank">
+                      <b><button>3011 E Grand Blvd, Detroit, MI 48202</button></b></a></p><br>
+                    </div>
+                    <small class="text-muted"><a href="https://fisherbuilding.city/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
+                    </div>
+                  </div>
+
+              <div class="card-deck">
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <img src="static\images\waynecounty.jpg" class="card-img-top"  alt="wayne county building picture">
+                    <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Wayne County Building</b><br></h5> <!--card-->
+                    <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Wayne County Building is a monumental government structure located at 600 Randolph Street in Downtown 
+                      Detroit, Michigan. It formerly contained the Wayne County administrative offices – now located in the Guardian Building at 500 Griswold Street – 
+                      and its courthouse. As Wayne County Courthouse, it was listed on the National Register of Historic Places in 1975. When it was completed in 1902, 
+                      it was regarded as "one of the most sumptuous buildings in Michigan". <a href="https://en.wikipedia.org/wiki/Michigan_Science_Center" target="_blank"><b><button>wikipedia</button></b></a></p>
+                      <br>
+                    <!--provides location and once you click it will redirect to google maps in a new tab-->
+                    <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Wayne+County+Building/@42.3321681,-83.0511252,15z/data=!3m1!4b1!4m5!3m4!1s0x883b2d2f3cce309b:0x9170176efc739340!8m2!3d42.3319691!4d-83.0428577" target="_blank">
+                      <b><button>600 Randolph Street, Detroit, MI 48226</button></b></a></p><br>
+                    </div>
+                    <small class="text-muted"><a href="http://www.waynecounty.com/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
+                    </div>
+                  </div>
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                
+                <img src="static\images\heid.jpg" class="card-img-top"  alt="Heidelberg picture">
+                <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>The Heidelberg Project</b><br></h5> <!--card-->
+                <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Heidelberg Project is an outdoor art project in the McDougall-Hunt neighborhood on Detroit's east side, 
+                  just north of the city's historically African-American Black Bottom area. It was created in 1986 by the artist Tyree Guyton, who was assisted by his 
+                  wife, Karen, and grandfather Sam Mackey. <br><br>The Heidelberg Project is in part a political protest, as Tyree Guyton's childhood neighborhood began to 
+                  deteriorate after the 1967 riots. Guyton described coming back to Heidelberg Street after serving in the Army; he was astonished to see that the 
+                  surrounding neighborhood looked as if "a bomb went off". <br><br>At first, the project consisted of his painting a series of houses on Detroit's Heidelberg 
+                  Street with bright dots of many colors and attaching salvaged items to the houses. <br><br>It was a constantly evolving work that transformed a hard-core 
+                  inner city neighborhood where people were afraid to walk, even in daytime, into one in which neighbors took pride and where visitors were many and 
+                  welcomed. Despite the area being characterized by high levels of blight and poverty, the evolving art work grew Tyree Guyton worked on the 
+                  Heidelberg Project daily with the children on the block.<a href="https://en.wikipedia.org/wiki/Heidelberg_Project" target="_blank"><b><button>wikipedia</button></b></a></p>
+                  <br>
+                <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--days and time open-->
+                  Monday	8:00 AM – 7:00 PM<br>
+                  Tuesday	8:00 AM – 7:00 PM<br>
+                  Wednesday	8:00 AM – 7:00 PM<br>
+                  Thursday	8:00 AM – 7:00 PM<br>
+                  Friday	8:00 AM – 7:00 PM<br>
+                  Saturday	8:00 AM – 7:00 PM<br>
+                  Sunday	8:00 AM – 7:00 PM<br><br></p>
+                <!--provides location and once you click it will redirect to google maps in a new tab-->
+                <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/The+Heidelberg+Project/@42.3555662,-83.0193289,15.91z/data=!4m5!3m4!1s0x8824d2ca33ac15ef:0x9b701cc41288fb69!8m2!3d42.3587418!4d-83.0208923" target="_blank">
+                  <b><button>3600 Heidelberg St, Detroit, MI 48207</button></b></a></p><br>
+                </div>
+                <small class="text-muted"><a href="http://www.heidelberg.org/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
+                </div>
+              </div>
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                
+                <img src="static\images\michigancentral.jpg" class="card-img-top"  alt="michigan central picture">
+                <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Michigan Central</b><br></h5> <!--card-->
+                <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->Michigan Central Station is the historic former main intercity passenger rail station in Detroit, Michigan. 
+                  Built for the Michigan Central Railroad, it replaced the original depot in downtown Detroit, which was shuttered after a major fire on December 26, 
+                  1913, forcing the still unfinished station into early service. Formally dedicated on January 4, 1914, the station remained open for business until 
+                  the cessation of Amtrak service on January 6, 1988. <br><br>The station building consists of a train depot and an office tower with thirteen stories, two 
+                  mezzanine levels, and a roof height of 230 feet. The Beaux-Arts style architecture was designed by architects who had previously worked together on 
+                  Grand Central Terminal in New York, and it was the tallest rail station in the world at the time of its construction. <br><br>The building is located in the 
+                  Corktown district of Detroit near the Ambassador Bridge, approximately 3⁄4 mi southwest of downtown Detroit. It is located behind Roosevelt Park, and 
+                  the Roosevelt Warehouse is adjacent to the east, with a tunnel connection to the MCS. The city's Roosevelt Park serves as a grand entryway to the station.<a href="https://en.wikipedia.org/wiki/Michigan_Central_Station" target="_blank"><b><button>wikipedia</button></b></a></p>
+                  <br>
+                <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--days and time open-->
+                  Monday	9:00 AM – 5:00 PM<br>
+                  Tuesday	9:00 AM – 5:00 PM<br>
+                  Wednesday	9:00 AM – 5:00 PM<br>
+                  Thursday	9:00 AM – 5:00 PM<br>
+                  Friday	9:00 AM – 5:00 PM<br>
+                  Saturday	Closed
+                  Sunday	Closed<br><br></p>
+                <!--provides location and once you click it will redirect to google maps in a new tab-->
+                <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Michigan+Central/@42.328722,-83.0799515,17z/data=!3m1!4b1!4m5!3m4!1s0x883b2d58ea735819:0x9986fdbad81e24ac!8m2!3d42.3288696!4d-83.077682" target="_blank">
+                  <b><button>2001 15th St, Detroit, MI 48216</button></b></a></p><br>
+                </div>
+                <small class="text-muted"><a href="https://michigancentral.com/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
+                </div>
+              </div>
+
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                
+                <img src="static\images\grandcircus.jpg" class="card-img-top"  alt="circus park picture">
+                <h5 class="card-title" style="font-family: 'Arvo', serif;"><b>Grand Circus Park</b><br></h5> <!--card-->
+                <p class="description" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--description-->The Grand Circus Park Historic District contains the 5-acre Grand Circus Park in Downtown Detroit, Michigan 
+                  that connects the theatre district with its financial district. It is bisected by Woodward Avenue, four blocks north of Campus Martius Park, and is 
+                  roughly bounded by Clifford, John R. and Adams Streets. The district was listed on the National Register of Historic Places in 1983. <br><br>The building at 
+                  25 West Elizabeth Street was added to the district in 2000, and additional structures located within the district, but built between 1932 and 1960, 
+                  were approved for inclusion in 2012.<a href="https://en.wikipedia.org/wiki/Grand_Circus_Park_Historic_District" target="_blank"><b><button>wikipedia</button></b></a></p>
+                  <br>
+                <p class="time" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><!--days and time open-->
+                  Monday  6AM–10PM<br>
+                  Tuesday 6AM–10PM<br>
+                  Wednesday 6AM–10PM<br>
+                  Thursday  6AM–10PM<br>
+                  Friday  6AM–10PM<br>
+                  Saturday  6AM–10PM<br>
+                  Sunday  6AM–10PM<br><br></p>
+                <!--provides location and once you click it will redirect to google maps in a new tab-->
+                <p class="location" style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600;"><a href="https://www.google.com/maps/place/Grand+Circus+Park/@42.3364771,-83.053027,17z/data=!4m5!3m4!1s0x883b2d33c7aaaaab:0xf931ede680fd4deb!8m2!3d42.3364771!4d-83.0508383" target="_blank">
+                  <b><button>101-157 Witherell St, Detroit, MI 48226</button></b></a></p><br>
+                </div>
+                <small class="text-muted"><a href="http://downtowndetroitparks.com/" target="_blank"><b><button>click to view official website</button></b></a><br><br></small><!--makes the text smaller also website link-->
+                </div>
+              </div>
+            <!--button for getting back to the top of the page-->
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Click to go back to the top</button><!--button to get back to the top of the page-->
+  </body>
 </html>
 {% endblock %}

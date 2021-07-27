@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   font-family: "Sofia", sans-serif;
-}
+} */
 
 h2 {
   color: #0a4870;
@@ -33,6 +33,8 @@ ul .booking-card {
   color: #f4f4f5;
   transition: 0.3s;
 }
+
+
 ul .booking-card::before {
   content: "";
   position: absolute;
@@ -43,9 +45,13 @@ ul .booking-card::before {
   background: rgba(10, 72, 112, 0);
   transition: 0.3s;
 }
+
+
 ul .booking-card .book-container {
   height: 200px;
 }
+
+
 ul .booking-card .book-container .content {
   position: relative;
   opacity: 0;
@@ -76,7 +82,7 @@ ul .booking-card .book-container .content .btn:hover {
 ul .booking-card .informations-container {
   flex: 1 0 auto;
   padding: 20px;
-  background: #9799a0;
+  background: #38A0D0;
   transform: translateY(206px);
   transition: 0.3s;
   opacity: 87%;
