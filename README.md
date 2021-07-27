@@ -3,7 +3,7 @@
 ## WayneSociety
 Project: https://github.com/WSU-4110/WayneSociety/wiki
 
-Live Website Demo: https://waynesocietyweb.herokuapp.com/
+Live Website Demo: https://waynesocietyweb.herokuapp.com/  (Large Screen Preferred)
 
 Contributors to the project:
 ---
