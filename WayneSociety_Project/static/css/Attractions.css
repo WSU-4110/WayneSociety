@@ -71,187 +71,101 @@ instead of next to each other */
 
 
 
-/* footer{
-  background: #38A0D0;
+
+.pos{  
+  max-width: fit-content;
+}
+
+.footer-font{
+  font-size: xx-large;
   color: white;
-  padding: 10px;
-  margin-top: 30px;
-  margin-bottom: -70px;
-  margin-left: -55px;
-  margin-right: -55px;
-  text-align: center;
+}
 
+.pos2{
+
+align-items: center; 
+justify-content: center; 
+}
+
+.footer-bac{
+  opacity: 50%;
+} 
+
+
+/* code {
+  background: #2db34a;
+  border-radius: 8px;
+  display: block;
+  padding-block-end: 150px;
+  
+  
 } */
+.contact-form {
+	font-family: 16px;
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-.content1{
-  position: relative;
-  margin: 130px auto;
-  text-align: center;
-  padding: 0 20px;
+.contact-form .separator {
+	
+	margin-bottom: 0px;
 }
-.content1 .text{
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #202020;
+
+.contact-form .form {
+  display: flex ;
+	flex-direction: column;
+	font-size: 16px;
 }
-.content1 .p{
-  font-size: 2.1875rem;
-  font-weight: 600;
-  color: #202020;
+
+.contact-form_title {
+
+	text-align: left;
+	font-size: 28px;
 }
-footer{
-  position: fixed;
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+	border: solid 1px #e8e8e8;
+	font-family: 'Roboto', sans-serif;
+	padding: 10px 7px;
+	margin-bottom: 10px;
+	outline: none;
+}
+
+.contact-form textarea {
+	resize: none;
+}
+
+.contact-form .butt {
+	background: #2ac4ea;
+	border: round 10px #2ac4ea;
+
+	cursor: pointer;
+	padding: 10px 50px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.contact-form .butt:hover {
+	background: #2a9dea;
+	border: solid 1px #2ac4ea;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea,
+.contact-form .butt {
+	font-size: 15px;
+	border-radius: 10px
+}
+.para{
+  position: absolute;
   bottom: 0px;
-  width: 100%;
-  margin-left: -55px;
-  margin-right: -55px;
-  background: #111;
-  margin-top: 100px;
-  margin-bottom: -100px;
-}
-.main-content{
-  display: flex;
-}
-.main-content .box{
-  flex-basis: 50%;
-  padding: 10px 20px;
-}
-.box h2{
-  font-size: 1.125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.box .content{
-  margin: 20px 0 0 0;
-  position: relative;
-}
-.box .content:before{
-  position: absolute;
-  content: '';
-  top: -10px;
-  height: 2px;
-  width: 100%;
-  background: #1a1a1a;
-}
-.box .content:after{
-  position: absolute;
-  content: '';
-  height: 2px;
-  width: 15%;
-  background: #f12020;
-  top: -10px;
-}
-.left .content p{
-  text-align: justify;
-}
-.left .content .social{
-  margin: 20px 0 0 0;
-}
-.left .content .social a{
-  padding: 0 2px;
-}
-.left .content .social a span{
-  height: 40px;
-  width: 40px;
-  background: #1a1a1a;
-  line-height: 40px;
   text-align: center;
+  padding-left: 630px;
+  padding-bottom: 60px;
   font-size: 18px;
-  border-radius: 5px;
-  transition: 0.3s;
+  color: white;
 }
-.left .content .social a span:hover{
-  background: #f12020;
-}
-.center .content .fas{
-  font-size: 1.4375rem;
-  background: #1a1a1a;
-  height: 45px;
-  width: 45px;
-  line-height: 45px;
-  text-align: center;
-  border-radius: 50%;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.center .content .fas:hover{
-  background: #f12020;
-}
-.center .content .text{
-  font-size: 1.0625rem;
-  font-weight: 500;
-  padding-left: 10px;
-}
-.center .content .phone{
-  margin: 15px 0;
-}
-.right form .text{
-  font-size: 1.0625rem;
-  margin-bottom: 2px;
-  color: #656565;
-}
-.right form .msg{
-  margin-top: 10px;
-}
-.right form input, .right form textarea{
-  width: 100%;
-  font-size: 1.0625rem;
-  background: #151515;
-  padding-left: 10px;
-  border: 1px solid #222222;
-}
-.right form input:focus,
-.right form textarea:focus{
-  outline-color: #3498db;
-}
-.right form input{
-  height: 35px;
-}
-.right form .btn{
-  margin-top: 10px;
-}
-.right form .btn button{
-  height: 40px;
-  width: 100%;
-  border: none;
-  outline: none;
-  background: #f12020;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: .3s;
-}
-.right form .btn button:hover{
-  background: #000;
-}
-.bottom center{
-  padding: 5px;
-  font-size: 0.9375rem;
-  background: #151515;
-}
-.bottom center span{
-  color: #656565;
-}
-.bottom center a{
-  color: #f12020;
-  text-decoration: none;
-}
-.bottom center a:hover{
-  text-decoration: underline;
-}
-@media screen and (max-width: 900px) {
-  footer{
-    position: relative;
-    bottom: 0px;
-  }
-  .main-content{
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .main-content .box{
-    margin: 5px 0;
-  }
-}
-
-
